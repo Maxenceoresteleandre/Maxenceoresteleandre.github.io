@@ -43,6 +43,33 @@ a:hover {
 		-o-transform: rotate(8deg);
 		-ms-transform: rotate(8deg);
 }
+
+.link-n {
+	color: rgb(159, 144, 255);
+	transform: scale(1.0);
+	background-color: transparent;
+	text-decoration: none;
+	font-size: large;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-right: 20%;
+	text-align: center;
+}
+
+.link-n:hover {
+	transform: rotate(0deg);
+	text-decoration: underline;
+	transform: scale(1.25);
+		-webkit-transform: scale(1.25);
+		-moz-transform: scale(1.25);
+		-o-transform: scale(1.25);
+		-ms-transform: scale(1.25);
+}
+
+.h-line {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
   
 a:active {
 	color: rgb(255, 82, 238);
@@ -190,15 +217,6 @@ iframe:hover {
 	transition: all ease-in-out .2s;
 }
 
-.links-and-contact {
-	display: grid;
-	grid-template-columns: 30% 70%;
-}
-
-.links {
-	justify-self: center;
-}
-
 .links-list {
 	list-style: none;
 	padding: 0;
@@ -247,8 +265,66 @@ hr {
 	width:100%;
 }
 
+.links-and-contact {
+	grid-template-columns: 100%;
+	display: flex;
+	width: 100%;
+}
+
+.links {
+	justify-self: center;
+	text-align: center;
+	flex:1.0;
+	margin-left: 5%;
+}
+
+.mail-box {
+	flex: 1.0;
+	margin-right: 5%;
+	vertical-align: middle;
+	display:flex;
+	flex-direction: column;
+}
+
+.mail-button {
+	font-size: large;
+	flex: 1;
+	margin-left:  5%;
+	margin-right: 5%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	border: 10px;
+	border-radius: 20px;
+	background-color: #003f3d;
+	transform: scale(1.0);
+	transition: transform 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	display: block;
+}
+
+.mail-button:hover {
+	color: rgb(91, 52, 190);
+	cursor: pointer;
+	background-color: #002928;
+	text-decoration: underline;
+	transition: 0.50s;
+  		-webkit-transition: 0.50s;
+  		-moz-transition: 0.50s;
+  		-ms-transition: 0.50s;
+  		-o-transition: 0.50s;
+  	transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+}
+
 button {
 	flex: 1;
+	min-height: 80px;
 	margin-left:  5%;
 	margin-right: 5%;
 	border: 10px;
@@ -266,7 +342,7 @@ button {
 button:hover {
 	color: rgb(91, 52, 190);
 	cursor: pointer;
-	background-color: transparent;
+	background-color: #002928;
 	text-decoration: underline;
 	transition: 0.50s;
   		-webkit-transition: 0.50s;
@@ -292,8 +368,6 @@ button:hover {
 		grid-template-columns: 100%;
 	}
 
-	.links-and-contact {
-		grid-template-columns: 100%;
-	}
+	
 }
 
