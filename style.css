@@ -50,10 +50,7 @@ a:hover {
 	background-color: transparent;
 	text-decoration: none;
 	font-size: large;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	margin-right: 20%;
-	text-align: center;
+	margin-top: 20%;
 }
 
 .link-n:hover {
@@ -66,9 +63,21 @@ a:hover {
 		-ms-transform: scale(1.25);
 }
 
+hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 .h-line {
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+.v-line {
+	transform: rotate(90deg);
+	-ms-flex-align: center;
+	flex:0.2;
 }
   
 a:active {
@@ -120,6 +129,13 @@ li {
 	margin:10px;
 }
 
+.intro-child-links {
+	flex:0.3;
+	border:10 solid black;
+	margin-right: 10px;
+}
+  
+
 .intro-secundary {
 	text-align: center;
 }
@@ -138,6 +154,28 @@ li {
 	list-style: none;
 	padding: 0;
 }
+
+.hscrollmenu {
+	background-color: #333;
+	overflow: auto;
+	white-space: nowrap;
+  }
+
+.itchgame {
+	display: flex;
+}
+
+.hscrollmenu a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+  }
+  
+.hscrollmenu a:hover {
+	background-color: #777;
+  }
 
 .projects-heading {
 	text-align: center;	
@@ -181,7 +219,9 @@ li {
 }*/
 
 iframe {
+	position: relative;
 	scale: 1;
+	z-index: 0;
 	justify-self: center;
 	border-radius: 20px;
 	transform: rotate(0deg);
@@ -200,9 +240,10 @@ iframe {
   }
   
 iframe:hover {
+	z-index: 999;
 	transform: 
 		rotate(-2deg) 
-		scale(1.2);
+		scale(1.35);
 	/* transform: rotate3d(2, -1, -1, -0.2turn); */
   }
 
@@ -251,12 +292,6 @@ form input[type="submit"] {
 
 .submit-button-wrapper {
 	margin: 20px 0;
-}
-
-hr {
-	border: 0;
-	height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 .intro-tab {
@@ -324,9 +359,9 @@ hr {
 
 button {
 	flex: 1;
-	min-height: 80px;
-	margin-left:  5%;
-	margin-right: 5%;
+	min-height: 40px;
+	margin-left:  10%;
+	margin-right: 10%;
 	border: 10px;
 	border-radius: 20px;
 	background-color: #003f3d;
@@ -339,6 +374,16 @@ button {
 	display: block;
 }
 
+.button-l {
+	margin-left: 24%;
+	margin-right: 1%;
+}
+
+.button-r {
+	margin-left: 1%;
+	margin-right: 24%;
+}
+
 button:hover {
 	color: rgb(91, 52, 190);
 	cursor: pointer;
@@ -349,11 +394,11 @@ button:hover {
   		-moz-transition: 0.50s;
   		-ms-transition: 0.50s;
   		-o-transition: 0.50s;
-  	transform: rotate(15deg);
-		-webkit-transform: rotate(8deg);
-		-moz-transform: rotate(8deg);
-		-o-transform: rotate(8deg);
-		-ms-transform: rotate(8deg);
+  	transform: rotate(5deg);
+		-webkit-transform: rotate(5deg);
+		-moz-transform: rotate(5deg);
+		-o-transform: rotate(5deg);
+		-ms-transform: rotate(5deg);
 }
 
 @media (max-width: 480px) {
