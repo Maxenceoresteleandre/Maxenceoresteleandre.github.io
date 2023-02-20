@@ -1,8 +1,171 @@
+
+/*
+
+<svg viewBox="0 0 200 200" xmlns='http://www.w3.org/2000/svg' style="position:absolute; filter:blur(20px)">
+		<filter id='noiseFilter'>
+		  <feTurbulence 
+			type='fractalNoise' 
+			baseFrequency='0.65' 
+			numOctaves='3' 
+			stitchTiles='stitch' />
+		</filter>
+	  
+		<rect width='100%' height='100%' filter='url(#noiseFilter)' />
+	  </svg>
+
+*/
+
+/*
+###################################################################################################
+###################################################################################################
+###################################################################################################
+###################################################################################################
+*/
+
+
+
+.bubbles{
+	filter:blur(3px);
+	position:fixed;
+	width:100%;
+	height: 100%;
+	z-index:-1;
+	overflow:hidden;
+	top:0;
+	left:0;
+  }
+  .bubble{
+	position: absolute;
+	bottom:-100px;
+	width:40px;
+	height: 40px;
+	background:#003e3a9e;
+	border-radius:50%;
+	opacity:0.5;
+	animation: rise 20s infinite ease-in;
+  }
+  .bubble:nth-child(1){
+	width:40px;
+	height:40px;
+	left:10%;
+	animation-duration:16s;
+  }
+  .bubble:nth-child(2){
+	width:20px;
+	height:20px;
+	left:20%;
+	animation-duration:10s;
+	animation-delay:-1s;
+  }
+  .bubble:nth-child(3){
+	width:50px;
+	height:50px;
+	left:35%;
+	animation-duration:14s;
+	animation-delay:4s;
+  }
+  .bubble:nth-child(4){
+	width:80px;
+	height:80px;
+	left:50%;
+	animation-duration:22s;
+	animation-delay:0s;
+  }
+  .bubble:nth-child(5){
+	width:35px;
+	height:35px;
+	left:55%;
+	animation-duration:12s;
+	animation-delay:2s;
+  }
+  .bubble:nth-child(6){
+	width:45px;
+	height:45px;
+	left:65%;
+	animation-duration:16s;
+	animation-delay:6s;
+  }
+  .bubble:nth-child(7){
+	width:90px;
+	height:90px;
+	left:70%;
+	animation-duration:24s;
+	animation-delay:4s;
+  }
+  .bubble:nth-child(8){
+	width:25px;
+	height:25px;
+	left:80%;
+	animation-duration:12s;
+	animation-delay:4s;
+  }
+  .bubble:nth-child(9){
+	width:15px;
+	height:15px;
+	left:70%;
+	animation-duration:10s;
+	animation-delay:2s;
+  }
+  .bubble:nth-child(10){
+	width:90px;
+	height:90px;
+	left:25%;
+	animation-duration:20s;
+	animation-delay:8s;
+  }
+  @keyframes rise{
+	0%{
+	  bottom:-100px;
+	  transform:translateX(0);
+	}
+	50%{
+	  transform:translate(100px);
+	}
+	100%{
+	  bottom:1080px;
+	  transform:translateX(-200px);
+	}
+  }
+
+
+
+html {
+	overflow-x: hidden;
+  }
+
 body {
 	font-family: 'Noto Sans', sans-serif;
-	background: #002e2b;
 	color: #ffffff;
+	background: #005853;
+	overflow: hidden;
+	
+	/*background-image: linear-gradient(to bottom right, #005853, #001816);*/
+	/*background: linear-gradient(-30deg, #012220, #012220 75%, #04453a 75%  #04453a 100%);*/
+	background: radial-gradient( rgb(0, 46, 35) 0%, black 100%);
+	background-repeat:unset;
+	background-position: -450px -850px;
+	background-size: 300% 300%;
 }
+
+@keyframes gradient {
+	0% {
+		background-size: 100% 100%;
+	}
+	50% {
+		background-size: 200% 200%;
+	}
+	100% {
+		background-size: 100% 100%;
+	}
+}
+
+/*
+###################################################################################################
+###################################################################################################
+###################################################################################################
+###################################################################################################
+*/
+
 
 a {
 	transform: rotate(0deg);
@@ -69,6 +232,14 @@ hr {
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
+.h-line2 {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 80, 92, 0.75), rgba(0, 80, 92, 0.7), rgba(0, 0, 0, 0));
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
 .h-line {
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -121,7 +292,30 @@ li {
 	flex:0.4;
 	border:10 solid black;
 	margin:10px;
+	transform: scale(1.0);
+	transition: transform 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
 }
+.intro-child-im:hover {
+	text-decoration: underline;
+	transform: scale(1.4);
+		-webkit-transform: scale(1.4);
+		-moz-transform: scale(1.4);
+		-o-transform: scale(1.4);
+		-ms-transform: scale(1.4);
+}
+.intro-child-im:hover .profile-picture{
+	text-decoration: underline;
+	transform: scale(0.775);
+		-webkit-transform: scale(0.775);
+		-moz-transform: scale(0.775);
+		-o-transform: scale(0.775);
+		-ms-transform: scale(0.775);
+}
+
 
 .intro-child-text {
 	flex:1;
@@ -264,7 +458,7 @@ iframe:hover {
 }
 
 .profile-picture {
-	border-radius: 15px;
+	border-radius: 10px;
 	width:  198.5px;
 	height: 278px;
 	box-shadow: 2px 4px 6px 2px rgba(1, 75, 74, 0.47);
@@ -312,7 +506,28 @@ form input[type="submit"] {
 	text-align: center;
 	flex:1.0;
 	margin-left: 5%;
-}
+	position: relative;
+	scale: 1;
+	z-index: 0;
+	transform: rotate(0deg);
+	transition: transform 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background-color: #00000000;
+  }
+  
+.links:hover {
+	z-index: 999;
+	transform: 
+		scale(1.15);
+	background-color: #00000015;
+	border-radius: 15px;
+	/*margin: 40px;*/
+	/* transform: rotate3d(2, -1, -1, -0.2turn); */
+  }
+
 
 .mail-box {
 	flex: 1.0;
@@ -395,11 +610,11 @@ button:hover {
   		-moz-transition: 0.50s;
   		-ms-transition: 0.50s;
   		-o-transition: 0.50s;
-  	transform: rotate(5deg);
-		-webkit-transform: rotate(5deg);
-		-moz-transform: rotate(5deg);
-		-o-transform: rotate(5deg);
-		-ms-transform: rotate(5deg);
+  	transform: rotate(5deg) scale(1.15);
+		-webkit-transform: rotate(5deg) scale(1.15);
+		-moz-transform: rotate(5deg) scale(1.15);
+		-o-transform: rotate(5deg) scale(1.15);
+		-ms-transform: rotate(5deg) scale(1.15);
 }
 
 @media (max-width: 480px) {
@@ -417,3 +632,146 @@ button:hover {
 	
 }
 
+
+.waviy {
+	position: relative;
+	margin-left: 0px;
+	transition: 0.50s;
+  		-webkit-transition: 0.50s;
+  		-moz-transition: 0.50s;
+  		-ms-transition: 0.50s;
+  		-o-transition: 0.50s;
+  }
+  .waviy span {
+	position: relative;
+	display: inline-block;
+	font-size: 40px;
+	color: #fff;
+	animation: flip 5s infinite;
+	animation-delay: calc(.2s * var(--i) - 4s)
+  }
+  @keyframes flip {
+	10%,30% {
+	  transform: /*rotateY(360deg)*/
+	  translateY(0)
+	}
+	20% {
+		transform: translateY(-20px)
+	  }
+  }
+  .waviy:hover {
+	margin-left: 40px;
+  	transform: scale(1.3);
+		-webkit-transform: scale(1.3);
+		-moz-transform: scale(1.3);
+		-o-transform: scale(1.3);
+		-ms-transform: scale(1.3);
+  }
+
+  .floating {
+	animation: float 3s ease-in-out infinite;
+	align-self: center;
+  }
+  
+  @keyframes float {
+	0%, 100% {
+	  transform: translateY(0);
+	  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+	}
+	50% {
+	  transform: translateY(-7px);
+	  text-shadow: 1px 1px 7px rgb(255, 255, 255);
+	}
+  }
+
+
+  .fade-in-text {
+	display: inline-block;
+	font-size:large; /* adjust font size as needed */
+  }
+  
+  .fade-in-text span {
+	opacity: 0;
+	animation: fadeIn 2s ease-in-out infinite alternate;
+	animation-delay: calc(var(--i) * 0.1s);
+  }
+  
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  }
+
+p {
+	position: relative;
+	scale: 1;
+	z-index: 0;
+	transform: rotate(0deg);
+	transition: transform 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background-color: #00000000;
+	margin: 25px;
+  }
+  
+p:hover {
+	z-index: 999;
+	transform: 
+		scale(1.1);
+	background-color: #00000015;
+	border-radius: 20px;
+	/*margin: 40px;*/
+	/* transform: rotate3d(2, -1, -1, -0.2turn); */
+  }
+
+  .z-text {
+	position: relative;
+	scale: 1;
+	z-index: 0;
+	transform: rotate(0deg);
+	transition: transform 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background-color: #00000000;
+  }
+  
+.z-text:hover {
+	z-index: 999;
+	transform: 
+		scale(1.1);
+	background-color: #00000015;
+	border-radius: 15px;
+	/*margin: 40px;*/
+	/* transform: rotate3d(2, -1, -1, -0.2turn); */
+  }
+
+
+.img-echoes {
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+	position:absolute;
+	scale: 2.5;
+  }
+
+.img-scrambled {
+	position:absolute;
+	scale: 0.4;
+  }
+
+  .img-olmo {
+	position:absolute;
+	scale: 0.18;
+  }
+
+  .img-pingu {
+	position:absolute;
+	scale: 0.6;
+  }
