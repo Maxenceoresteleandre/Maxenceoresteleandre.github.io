@@ -321,11 +321,11 @@ button:hover {
   		-moz-transition: 0.50s;
   		-ms-transition: 0.50s;
   		-o-transition: 0.50s;
-  	transform: rotate(5deg) scale(1.15);
-		-webkit-transform: rotate(5deg) scale(1.15);
-		-moz-transform: rotate(5deg) scale(1.15);
-		-o-transform: rotate(5deg) scale(1.15);
-		-ms-transform: rotate(5deg) scale(1.15);
+  	transform:  scale(1.15);
+		-webkit-transform: scale(1.15);
+		-moz-transform: scale(1.15);
+		-o-transform: scale(1.15);
+		-ms-transform: scale(1.15);
 }
 
 @media (max-width: 480px) {
