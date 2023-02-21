@@ -141,7 +141,7 @@ body {
 	
 	/*background-image: linear-gradient(to bottom right, #005853, #001816);*/
 	/*background: linear-gradient(-30deg, #012220, #012220 75%, #04453a 75%  #04453a 100%);*/
-	background: radial-gradient( rgb(0, 46, 35) 0%, black 100%);
+	background: radial-gradient( rgb(0, 60, 46) 0%, black 100%);
 	background-repeat:unset;
 	background-position: -450px -850px;
 	background-size: 300% 300%;
