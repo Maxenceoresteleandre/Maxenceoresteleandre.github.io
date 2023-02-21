@@ -170,7 +170,6 @@ span {
 }
 
 a {
-	transform: rotate(0deg);
 	transition: transform 0.5s;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -178,7 +177,6 @@ a {
 	-o-transition: 0.5s;
 	text-decoration: none;
 	color: #000;
-	display: block;
 }
 
 a:link {
@@ -202,6 +200,41 @@ a:hover {
   		-moz-transition: 0.50s;
   		-ms-transition: 0.50s;
   		-o-transition: 0.50s;
+}
+
+.link-a {
+	transform: rotate(0deg);
+	transition: transform 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
+
+.link-a:link {
+	color: rgb(159, 144, 255);
+	background-color: transparent;
+	text-decoration: none;
+}
+  
+.link-a:visited {
+	color: rgb(255, 109, 133);
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.link-a:hover {
+	color: rgb(91, 52, 190);
+	background-color: transparent;
+	text-decoration: underline;
+	transition: 0.50s;
+  		-webkit-transition: 0.50s;
+  		-moz-transition: 0.50s;
+  		-ms-transition: 0.50s;
+  		-o-transition: 0.50s;
   	transform: rotate(15deg);
 		-webkit-transform: rotate(8deg);
 		-moz-transform: rotate(8deg);
@@ -216,6 +249,7 @@ a:hover {
 	text-decoration: none;
 	font-size: large;
 	margin-top: 20%;
+	display: block;
 }
 
 .link-n:hover {
