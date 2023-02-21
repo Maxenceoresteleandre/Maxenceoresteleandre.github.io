@@ -41,7 +41,6 @@ body {
 
 
 a {
-	transform: rotate(0deg);
 	transition: transform 0.5s;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -73,11 +72,6 @@ a:hover {
   		-moz-transition: 0.50s;
   		-ms-transition: 0.50s;
   		-o-transition: 0.50s;
-  	transform: rotate(15deg);
-		-webkit-transform: rotate(8deg);
-		-moz-transform: rotate(8deg);
-		-o-transform: rotate(8deg);
-		-ms-transform: rotate(8deg);
 }
 
 .link-n {
@@ -90,7 +84,6 @@ a:hover {
 }
 
 .link-n:hover {
-	transform: rotate(0deg);
 	text-decoration: underline;
 	transform: scale(1.25);
 		-webkit-transform: scale(1.25);
@@ -123,7 +116,6 @@ a:active {
 	color: rgb(255, 82, 238);
 	background-color: transparent;
 	text-decoration: underline;
-	transform: rotate(-2deg);
 }
 
 h1, h2, h3, h4 {
@@ -245,15 +237,6 @@ li {
 	padding: 0;
 }
 
-.profile-picture {
-	border-radius: 10px;
-	width:  198.5px;
-	height: 278px;
-	box-shadow: 2px 4px 6px 2px rgba(1, 75, 74, 0.47);
-	transition: all ease-in-out .2s;
-	transform: rotate(-3deg);
-}
-
 .intro-tab {
 	text-align:left;
 	display: flex;
@@ -275,7 +258,6 @@ li {
 	position: relative;
 	scale: 1;
 	z-index: 0;
-	transform: rotate(0deg);
 	transition: transform 0.5s;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -290,8 +272,6 @@ li {
 		scale(1.15);
 	background-color: #00000015;
 	border-radius: 15px;
-	/*margin: 40px;*/
-	/* transform: rotate3d(2, -1, -1, -0.2turn); */
   }
 
 button {
@@ -300,7 +280,6 @@ button {
 	border: 10px;
 	border-radius: 20px;
 	background-color: #00706d;
-	transform: rotate(0deg);
 	transition: transform 0.5s;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -366,7 +345,6 @@ p {
 	position: relative;
 	scale: 1;
 	z-index: 0;
-	transform: rotate(0deg);
 	transition: transform 0.5s;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -396,7 +374,6 @@ p:hover {
 	position: relative;
 	scale: 1;
 	z-index: 0;
-	transform: rotate(0deg);
 	transition: transform 0.5s;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -414,8 +391,6 @@ p:hover {
 	transform: scale(1.1);
 	background-color: #0000009e;
 	border-radius: 50px;
-	/*margin: 40px;*/
-	/* transform: rotate3d(2, -1, -1, -0.2turn); */
   }
 
 
