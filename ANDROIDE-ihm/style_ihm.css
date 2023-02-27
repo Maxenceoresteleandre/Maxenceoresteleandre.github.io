@@ -135,6 +135,7 @@ iframe {
     margin-left:15px;
 }
 
+
 li {
 	font-family: 'Roboto Mono', monospace;
 	font-size: large;
@@ -245,6 +246,10 @@ li {
   
 .hscrollmenu a:hover {
 	background-color: #777;
+  }
+
+  .scrollable-element {
+	scrollbar-color: dark;
   }
 
 .projects-heading {
