@@ -13,7 +13,7 @@ body {
 	
 	/*background-image: linear-gradient(to bottom right, #005853, #001816);*/
 	/*background: linear-gradient(-30deg, #012220, #012220 75%, #04453a 75%  #04453a 100%);*/
-	background: radial-gradient( rgb(34, 34, 34) 0%, black 100%);
+	background: radial-gradient( rgb(0, 85, 50) 0%, rgb(39, 0, 25) 100%);
 	background-repeat:unset;
 	background-position: -450px -850px;
 	background-size: 300% 300%;
@@ -100,7 +100,7 @@ hr {
 
 .h-line2 {
 	border: 0;
-	height: 1px;
+	height: 3px;
 	background-image: linear-gradient(to right, rgba(0, 80, 92, 0.75), rgba(0, 80, 92, 0.7), rgba(0, 0, 0, 0));
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -109,6 +109,12 @@ hr {
 .h-line {
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+.big-h-line {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	height: 7px;
 }
 
 
@@ -122,10 +128,24 @@ h1, h2, h3, h4 {
 	font-family: 'Roboto Mono', monospace;
 }
 
+iframe {
+	width: 423px;
+    height: 237px;
+    display:inline-block;
+    margin-left:15px;
+}
+
 li {
 	font-family: 'Roboto Mono', monospace;
 	font-size: large;
 	padding-top: 10px;
+}
+
+.li-long {
+	font:  1.0em "Fira Sans", sans-serif;
+	font-size: large;
+	padding-top: 10px;
+	margin-bottom: 15px;
 }
 
 
@@ -352,6 +372,7 @@ p {
 	-o-transition: 0.5s;
 	background-color: #00000000;
 	margin: 25px;
+	font:  1.0em "Fira Sans", sans-serif;
   }
 
 /*
@@ -371,6 +392,7 @@ p:hover {
 }
 
   .z-text {
+	padding: 7%;
 	position: relative;
 	scale: 1;
 	z-index: 0;
@@ -389,7 +411,7 @@ p:hover {
 .z-text:hover {
 	z-index: 999;
 	transform: scale(1.1);
-	background-color: #0000009e;
+	background-color: #000000ae;
 	border-radius: 50px;
   }
 
@@ -429,6 +451,14 @@ h3 {
 	white-space: pre-line;
 	margin-right: -10%;
 	text-align: center	;
+}
+
+.vid-title {
+	white-space: pre-line;
+	margin-left: 2%;
+	text-align: left;
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 .project-image-wrapper:hover > h3 {
