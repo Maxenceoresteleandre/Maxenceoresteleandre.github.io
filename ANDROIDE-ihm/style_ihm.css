@@ -133,6 +133,7 @@ iframe {
     height: 237px;
     display:inline-block;
     margin-left:15px;
+	border-radius: 20px;
 }
 
 
