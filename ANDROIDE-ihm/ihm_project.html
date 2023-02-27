@@ -138,14 +138,14 @@
 					Ranbird :
 					<p>
 						Un service proposant de louer ou acheter un drone volant pour randonnée. Le drone peut être en vol libre ou piloté par l'utilisateur,
-						et dispose d'outils utiles dans des situations d'urgence (cf Randog). La manette de commande peut être utilisée comme lunettes de 
-						réalité virtuelle, pour voir à travers la caméra de Randbird en temps réel.
+						et dispose d'outils utiles dans des situations d'urgence (cf Randog). La manette de commande dispose d'un écran et peut être utilisée 
+						pour voir à travers la caméra de Randbird en temps réel.
 					</p>
 				</li>
 				<li>
 					Bornes de randonnée :
 					<p>
-						Des bornes disposées en début des trajets de randonnée, présentant une carte tactile en trois dimensions de la zone de randonnée (pour 
+						Des bornes installées en début des trajets de randonnée, présentant une carte tactile en trois dimensions de la zone de randonnée (pour 
 						mieux évaluer les pentes et les reliefs des trajets), sur laquelle il est possible de tracer un chemin. La borne indique ensuite la durée,
 						difficulté, et autres informations utiles sur le trajet. Elle génère également un code QR pour que les utilisateurs puissent télécharger 
 						cette carte sur leur téléphone.
@@ -158,9 +158,40 @@
 
 		<div class="z-text">
 			<h2>Projet sélectionné, Randbird :</h2>
-			<p>
-				description des features, jsp
-			</p>
+			<ul>
+				<li class="li-long">
+					Drone aérien télécommandé conçu pour accompagné les randonneurs. 
+				</li>
+				<li class="li-long">
+					Le drone a une large télécommande disposant d'un écran, qui peut être utilisée pour afficher la vue du paysage depuis la caméra du Randbird avec
+					un overlay informatif ajouté par dessus. Le drone dispose également d'une base de données des cartes de la région qui peuvent être affichées sur
+					l'écran de la manette.
+				</li>
+				<li class="li-long">
+					Modes de contrôles :
+					<ul>
+						<li class="li-long">
+							<b>Manuel :</b> l'utilisateur contrôle directement les mouvements du drone avec la télécommande.
+						</li>
+						<li class="li-long">
+							<b>Vocal :</b> l'utilisateur peut donner des commandes vocales générales au drone (suivre, garder sa position, prendre une photo, prendre 
+							de l'altitude, revenir...).
+						</li>
+						<li class="li-long">
+							<b>Automatique :</b> le drone suit l'utilisateur mais se déplace par lui-même. Si aucun n'ordre n'a été donné pendant une longue période, le
+							drone repasse toujours en mode automatique.
+						</li>
+					</ul>
+				</li>
+				<li class="li-long">
+					Le drone peut recevoir des broadcasts Randbird signalant des conditions météo anormalement dangereuses ou tout événement pouvant mettre en danger les
+					randonneurs. Quand un tel signal est reçu, il est transmis à l'utilisateur sur l'écran de sa manette Randbird.
+				</li>
+				<li class="li-long">
+					Si Randbird ne détecte pas de mouvement du randonneur pendant une trop longue durée, un message s'affiche sur la télécommande. Si le randonneur ne 
+					répond pas à ce message, un signal de détresse est envoyé aux relais Randbird le plus proche.
+				</li>
+			</ul>
 		</div>
 
 		<hr class="h-line">
