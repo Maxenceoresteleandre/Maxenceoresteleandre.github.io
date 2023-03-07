@@ -421,6 +421,43 @@ p:hover {
 	border-radius: 50px;
   }
 
+img {
+	position: absolute;
+	scale: 0.3;
+	z-index: 0;
+	transition: transform 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+  }
+
+.img-1 {
+	transform: rotate(30deg);
+  }
+.img-2 {
+	transform: rotate(-20deg);
+  }
+.img-3 {
+	transform: rotate(10deg);
+  }
+.img-4 {
+	transform: rotate(-5deg);
+  }
+.img-5 {
+	transform: rotate(-30deg);
+  }
+  
+img:hover {
+	z-index: 999;
+	rotate: 0deg;
+	transform: scale(1.75) rotate(0deg);
+		-webkit-transform: scale(1.75), rotate(0deg);
+		-moz-transform: scale(1.75), rotate(0deg);
+		-o-transform: scale(1.75), rotate(0deg);
+		-ms-transform: scale(1.75), rotate(0deg);
+  }
+
 
 /*
 ############################################################################################################
