@@ -421,6 +421,15 @@ p:hover {
 	border-radius: 50px;
   }
 
+.proto-img {
+	position: relative;
+	scale: 0.5;
+}
+
+.proto-img:hover {
+	transform: scale(1.0);
+}
+  
 img {
 	position: absolute;
 	scale: 0.3;
