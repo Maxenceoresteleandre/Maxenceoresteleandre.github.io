@@ -1,20 +1,21 @@
-## CareerFoundry Web Development Short Course
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-This is the supporting repository to CareerFoundry's short course on web development.
-
-### Take the free short course
-https://careerfoundry.com/en/short-courses/become-a-web-developer/
-
-### Try this code
-The only prerequisite for running this code is a web browser. 
-- Clone this repository or download the zip and extract it to a convenient location
-- Open the `index.html` file in your browser of choice
-
-### License
-MIT
-
-### Contributions
-Corrections and code fixes are more than welcome. It will be appreciated if you stick to the code style found in the repository. Please raise an issue before you start working on your change.
-
-Made with ❤️️ in Berlin 🇩🇪🍺
+## Hullo
+Hello! I'm Maxence. This is a README. 
+Not sure what you're doing here.
+Hello.
+I would like you to leave now. 
+Kidding. 
+You can stay.
+Do you want to talk?
+You should talk to a real person.
+A readme usually isn't very fun to talk to.
+Believe me.
+Years of experience.
+You can talk to me if you want.
+Maxence.
+Not Maxence's readme.
+If you wanna talk to me you can send me an email.
+maxence.maire@yahoo.fr
+This is my personal adress by the way.
+Don't go around showing it to everyone okay?
+It's a secret between you and me.
+Now go talk to someone.
