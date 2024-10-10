@@ -47,17 +47,24 @@
 }
 
   .sidenav_logos {
-    display: flex; /* This makes the container a flexbox */
-    justify-content: space-between; /* Adjusts spacing between children */
+    display: flex; 
+    justify-content: space-between; 
     padding-left: 5%;
     padding-right: 5%;
-    align-items: center; /* Aligns children vertically (centered) */
-    /* align container at bottom of parent */
+    align-items: center; 
   }
   
-  .sidenav_logo_child img {
+  .sidenav_logo_child {
     padding: 10px;
     background-color: lightblue;
+    border: 1px solid #000;
+  }
+
+  .sidenav_bottom_box {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Optional: You can control width */
+    padding-bottom: 40px;
     border: 1px solid #000;
   }
   
