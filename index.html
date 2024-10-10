@@ -84,7 +84,9 @@
 		</div>
 
 		<div class="work-item">
-			
+			<a class="logo_child_img" href="./test.html">
+				<img class="project-img" src="images/allianzVR.jpg" />
+			</a>
 		</div>
 
 		<h2 class="z-text" style="margin-top: 60px;">Learning journey:
@@ -197,17 +199,8 @@
 		
 	</div>
 	</div>
-	<script>
-		// JavaScript to dynamically load the sidebar
-		fetch('sidenav.html') // Fetches the sidebar.html file
-		  .then(response => response.text()) // Converts the response to text
-		  .then(data => {
-			document.getElementById('sidebar-container').innerHTML = data; // Injects the sidebar into the placeholder
-		  })
-		  .catch(error => console.error('Error loading the sidebar:', error)); // Logs any errors
-	</script>
-	
 
+	<script src="sidenav_script.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>
