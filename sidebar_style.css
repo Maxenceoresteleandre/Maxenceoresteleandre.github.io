@@ -73,16 +73,15 @@
   } 
 
   .sidenav .logo_child_img {
-    scale:0.6;
     margin-left: -30px;
     margin-right: -30px;
 
-    transform: rotate(0deg);
-	transition: transform 0.5s;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
+    transform: rotate(0deg) scale(0.6);
+	transition: transform 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
 	text-decoration: none;
 	display: block;
   } 
@@ -95,11 +94,11 @@
   		-moz-transition: 0.50s;
   		-ms-transition: 0.50s;
   		-o-transition: 0.50s;
-  	transform: rotate(360deg);
-		-webkit-transform: rotate(360deg);
-		-moz-transform: rotate(360deg);
-		-o-transform: rotate(360deg);
-		-ms-transform: rotate(360deg);
+  	transform: rotate(360deg) scale(0.85);
+		-webkit-transform: rotate(360deg) scale(0.85);
+		-moz-transform: rotate(360deg) scale(0.85);
+		-o-transform: rotate(360deg) scale(0.85);
+		-ms-transform: rotate(360deg) scale(0.85);
     }
 
   .sidenav .bottom_box {
