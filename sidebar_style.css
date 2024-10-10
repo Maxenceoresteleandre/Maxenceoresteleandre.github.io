@@ -19,11 +19,25 @@
     color: #818181;
     display: block;
   }
-  
+
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     color: #f1f1f1;
   }
+
+  .sidenav .first_name {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: color 0.5s ease;
+  }
+
+  .sidenav .first_name:hover {
+    color: #f1f1f1;
+  }
+  
 
   /* Style page content */
 .main {
