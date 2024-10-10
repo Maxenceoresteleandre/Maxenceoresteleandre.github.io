@@ -25,17 +25,47 @@
     color: #f1f1f1;
   }
 
-  .sidenav .first_name {
-    padding: 6px 8px 6px 16px;
+  .sidenav .jobs {
+    padding-left: 5%;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: color 0.5s ease;
   }
 
-  .sidenav .first_name:hover {
+  .sidenav .jobs:hover {
     color: #f1f1f1;
+  }
+
+  .sidewaviy {
+	position: relative;
+	margin-left: 20px;
+	transition: 0.50s;
+  		-webkit-transition: 0.50s;
+  		-moz-transition: 0.50s;
+  		-ms-transition: 0.50s;
+  		-o-transition: 0.50s;
+  }
+  .sidewaviy span {
+	position: relative;
+	display: inline-block;
+	font-size: 30px;
+	color: #fff;
+	animation: flip 5s infinite;
+	animation-delay: calc(.2s * var(--i) - 4s)
+  }
+  @keyframes flip {
+	10%,30% {
+	  transform: /*rotateY(360deg)*/
+	  translateY(0)
+	}
+	20% {
+		transform: translateY(-20px)
+	  }
+  }
+  .sidewaviy:hover {
+	margin-left: 40px;
   }
   
 
