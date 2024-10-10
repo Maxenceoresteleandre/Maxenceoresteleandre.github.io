@@ -60,21 +60,27 @@
     }
 }
 
-  .sidenav_logos {
+  .sidenav .logos {
     display: flex; 
     justify-content: space-between; 
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
     align-items: center; 
   }
   
-  .sidenav_logo_child {
+  .sidenav .logo_child {
     padding: 10px;
     border: 1px solid #000;
-    scale:0.1;
-  }
+  } 
 
-  .sidenav_bottom_box {
+  .sidenav .logo_child_img {
+    border: 1px solid #000;
+    scale:0.6;
+    margin-left: -30px;
+    margin-right: -30px;
+  } 
+
+  .sidenav .bottom_box {
     position: absolute;
     bottom: 0;
     width: 100%; /* Optional: You can control width */
