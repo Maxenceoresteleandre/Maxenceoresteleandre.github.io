@@ -357,7 +357,7 @@ iframe:hover {
   }
   
 .links:hover {
-	z-index: 999;
+	z-index: 99;
 	transform: 
 		scale(1.15);
 	background-color: #00000015;
@@ -526,7 +526,7 @@ p {
   }
   
 .z-text:hover {
-	z-index: 999;
+	z-index: 99;
 	transform: 
 		scale(1.1);
 	background-color: #00000015;
