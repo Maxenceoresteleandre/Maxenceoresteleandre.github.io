@@ -56,8 +56,8 @@
   
   .sidenav_logo_child {
     padding: 10px;
-    background-color: lightblue;
     border: 1px solid #000;
+    scale:0.1;
   }
 
   .sidenav_bottom_box {
