@@ -7,47 +7,16 @@
 	<link href='bubbles_background.css' rel='stylesheet'>
 	<link href='hover_effects.css' rel='stylesheet' type='text/css'>
 	<link href='sidebar_style.css' rel='stylesheet'>
+	<link href='work_item_style.css' rel='stylesheet'>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 
-	<!-- Side navigation -->
-	<div class="sidenav">
-		<div class="sidewaviy">
-			<span style="--i:1">M</span>
-			<span style="--i:2">a</span>
-			<span style="--i:3">x</span>
-			<span style="--i:4">e</span>
-			<span style="--i:5">n</span>
-			<span style="--i:6">c</span>
-			<span style="--i:7">e</span>
-		</div>
-		<div class="sidewaviy">
-			<span style="--i:9;  font-size: 45px;margin-left: 40px;">M</span>
-			<span style="--i:10; font-size: 45px;">a</span>
-			<span style="--i:11; font-size: 45px;">i</span>
-			<span style="--i:12; font-size: 45px;">r</span>
-			<span style="--i:13; font-size: 45px;">e</span>
-		</div>
-		<h3 class="jobs" >Software Engineer</h3>
-		<h3 class="jobs" >Game Developer</h3>
-		<h3 class="jobs" style="margin-bottom: 100px;" >Computer Scientist</h3>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
-			<div class="logos">
-				<a class="logo_child_img" href="https://github.com/Maxenceoresteleandre" target="_blank" rel="noopener noreferrer">
-					<img src="images/logo_github.png" />
-				</a>
-				<a class="logo_child_img" href="https://maxence-maire.itch.io/" target="_blank" rel="noopener noreferrer">
-					<img src="images/logo_itch.png" />
-				</a>
-				<a class="logo_child_img" href="https://www.linkedin.com/in/maxence-maire-048930241/" target="_blank" rel="noopener noreferrer">
-					<img src="images/logo_linkedin.png" />
-				</a>
-			</div>
-	</div> 
+	<!-- Sidebar placeholder -->
+	<div id="sidebar-container"></div>
+
 	
 	<!-- Page content -->
 	<div class="main">
@@ -90,7 +59,7 @@
 
 				<ul class="z-text">
 					<li>Computer scientist, game developer and game designer.</li>
-					<li>Master's degree in Computer Science from Sorbonne Université.</li>
+					<li>Master's degree in Computer Science from Sorbonne University.</li>
 					<li>All-around creative tinkerer!</li>
 				</ul>
 			</div>
@@ -112,6 +81,10 @@
 				</div>
 				
 			</button>
+		</div>
+
+		<div class="work-item">
+			
 		</div>
 
 		<h2 class="z-text" style="margin-top: 60px;">Learning journey:
@@ -224,6 +197,17 @@
 		
 	</div>
 	</div>
+	<script>
+		// JavaScript to dynamically load the sidebar
+		fetch('sidenav.html') // Fetches the sidebar.html file
+		  .then(response => response.text()) // Converts the response to text
+		  .then(data => {
+			document.getElementById('sidebar-container').innerHTML = data; // Injects the sidebar into the placeholder
+		  })
+		  .catch(error => console.error('Error loading the sidebar:', error)); // Logs any errors
+	</script>
+	
+
 	<script src="script.js"></script>
 </body>
 </html>

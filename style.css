@@ -327,10 +327,6 @@ iframe:hover {
 	transform: rotate(-3deg);
 }
 
-/*.profile-picture:hover {
-	box-shadow: 6px 12px 18px 6px rgba(34,60,80,.47);
-}*/
-
 .intro-tab {
 	text-align:left;
 	display: flex;
