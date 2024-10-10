@@ -1,3 +1,5 @@
+
+// email button
 let submitButton = document.querySelector('#submit-button');
 function emailValidate(email) {
 	return email.includes('@');
@@ -17,3 +19,21 @@ function clickListener(event) {
 	console.log('Thanks for your message');
 }
 submitButton.addEventListener('click', clickListener);
+
+
+// header
+$(function(){
+	var shrinkHeader = 300;
+	 $(window).scroll(function() {
+	   var scroll = getCurrentScroll();
+		 if ( scroll >= shrinkHeader ) {
+			  $('.header').addClass('shrink');
+		   }
+		   else {
+			   $('.header').removeClass('shrink');
+		   }
+	 });
+   function getCurrentScroll() {
+	   return window.pageYOffset;
+	   }
+   });
