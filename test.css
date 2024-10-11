@@ -1,83 +1,203 @@
-html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .fixed {
-    position: fixed;
-    top: 0;
-  }
-  
-  .navigation {
-    width: 100%;
-    background-color: white;
-    height: 75px;
-  }
-  
-  .navigation ul {
+/* style.css */
+:root {
+    --linkheight: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul,
+ol {
     list-style: none;
-    margin: 20px 0 0 0;
-    padding: 0;
-  }
-  
-  .navigation ul li {
+}
+
+ul {
+    background-color: rgb(0 0 0 / 0);
+}
+
+ul li {
+    padding-left: 1rem;
+}
+
+.section-nav {
+    display: flex;
+    flex-direction: row;
+    width: 15em;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding-left: 0;
+    border-left: 1px solid #ddd;
+    background-color: rgb(0 0 0 / 0);
+}
+
+.section-nav a {
     display: inline-block;
-    margin: 0 0 0 30px;
-    padding: 0;
-  }
-  
-  .navigation ul li.active a {
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
-    border-bottom-color: inherit;
-  }
-  
-  .navigation ul li.blue {
-    border-bottom-color: #0071c5;
-  }
-  
-  .navigation ul li.green {
-    border-bottom-color: #c4d600;
-  }
-  
-  .navigation ul li.orange {
-    border-bottom-color: #fc4c02;
-  }
-  
-  .navigation ul li.yellow {
-    border-bottom-color: #f3d54e;
-  }
-  
-  .navigation ul li a:link,
-  .navigation ul li a:visited,
-  .navigation ul li a:active,
-  .navigation ul li a:hover,
-  .navigation ul li a:focus {
-    color: #333;
     text-decoration: none;
-    padding-bottom: 10px;
-  }
-  
-  .top-page {
-    margin-top: 75px;
-  }
-  
-  .page {
-    min-height: 500px;
-  }
-  
-  .page.blue {
-    background-color: #0071c5;
-  }
-  
-  .page.green {
-    background-color: #c4d600;
-  }
-  
-  .page.orange {
-    background-color: #fc4c02;
-  }
-  
-  .page.yellow {
-    background-color: #f3d54e;
-  }
+    line-height: 2rem;
+    padding: 0 1rem;
+    color: #202020;
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+    color: rgb(9, 153, 59);
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 1000;
+    color: rgb(9, 153, 59);
+    width: calc(100% - 7.5em);
+    margin: 1rem 0;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    padding-bottom: 20rem;
+
+}
+
+section:nth-of-type(even) {
+    padding-bottom: 20rem;
+}
+
+section:nth-of-type(1) {
+    background:
+        right 2rem 
+        top 2rem / 15em var(--linkheight) 
+        no-repeat 
+        linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(2) {
+    background:
+        right 2rem top 
+        calc(2 * var(--linkheight)) / 15em 
+        var(--linkheight) no-repeat 
+        linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(3) {
+    background: right 2rem top 
+                calc(3 * var(--linkheight)) / 15em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) {
+    padding-bottom: 0;
+    background: right 2rem top 
+                calc(4 * var(--linkheight)) / 15em 
+                var(--linkheight) no-repeat  
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) section:nth-of-type(1) {
+    background: right 2rem top 
+                calc(5 * var(--linkheight)) / 14em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) section:nth-of-type(2) {
+    background: right 2rem top 
+                calc(6 * var(--linkheight)) / 14em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) section:nth-of-type(3) {
+    background: right 2rem top 
+                calc(7 * var(--linkheight)) / 14em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) section:nth-of-type(4) {
+    background: right 2rem top 
+                calc(8 * var(--linkheight)) / 14em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) section:nth-of-type(5) {
+    background: right 2rem top 
+                calc(9 * var(--linkheight)) / 14em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) section:nth-of-type(6) {
+    background: right 2rem top 
+                calc(10 * var(--linkheight)) / 14em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) section:nth-of-type(7) {
+    background: right 2rem top 
+                calc(11 * var(--linkheight)) / 14em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(4) section:nth-of-type(8) {
+    background: right 2rem top  
+                calc(12 * var(--linkheight)) / 14em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(5) {
+    background: right 2rem top 
+                calc(13 * var(--linkheight)) / 15em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(6) {
+    background: right 2rem top 
+                calc(14 * var(--linkheight)) / 15em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(7) {
+    background: right 2rem top 
+                calc(15 * var(--linkheight)) / 15em 
+                var(--linkheight) no-repeat 
+                linear-gradient(#ccc, #ccc);
+
+}
+
+section:nth-of-type(n),
+section:nth-of-type(4) section:nth-of-type(n) {
+    background-attachment: fixed;
+}
