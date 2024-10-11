@@ -1,57 +1,41 @@
-:root {
-    --mainColor: #ff9800;
-  }
-  
-  html, body {
-    height: 100%;
-    font-family: 'Merriweather', serif;
-  }
-  
-  #navbar {
-    background: #1E2640;
-  }
-  
-  #home {
-    background: #F2B705;
-    color: #1E2640;
-  }
-  
-  #bio {
-    background: #F21B42;
-    color: #F2B705;
-  }
-  
-  #work {
-    background: #1E2640;
-    color: #F21B42;
-  }
-  
-  #contact {
-    background: black;
-    color: white;
-  }
-  
-  h1 {
-    font-size: 5em;
-  }
-  
-  .nav-item {
-    transition: background 200ms;
-  }
-  
-  .nav-link {
-    outline: none;
-    background:
-       linear-gradient(
-         to bottom, var(--mainColor) 0%,
-         var(--mainColor) 100%
-       );
-    background-position: 0 100%;
-      background-repeat: repeat-x;
-      background-size: 1px 1px;
-    transition: background-size .2s;
-  }
-  
-  .nav-item.active .nav-link {
-    background-size: 4px 50px;
-  }
+/* Default style for sidebar */
+.sidenav {
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.sidenav a.active {
+    color: #f1f1f1;
+    background-color: #575757;
+}
+
+.work-list-elements {
+    display: none; /* Hidden by default */
+}
+
+.work-list.active + .work-list-elements {
+    display: block; /* Show when active */
+}
+
+/* Styling the highlighted active item */
+.sidenav a:hover {
+    color: #f1f1f1;
+}

@@ -58,11 +58,9 @@
   }
 
   .sidenav .work-list {
-    display: inline-block;
     padding-left: 5%;
     text-decoration: none;
     font-size: 19px;    
-    display: block;
   }
 
   .sidenav .work-list-element {
