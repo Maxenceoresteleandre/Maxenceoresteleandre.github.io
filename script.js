@@ -1,4 +1,9 @@
 
+// scrollspy 
+$("#nav").scrollspy({ offset: -75 });
+
+
+
 // email button
 let submitButton = document.querySelector('#submit-button');
 function emailValidate(email) {

@@ -7,7 +7,7 @@
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #111111e0; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
   }
   
@@ -16,7 +16,7 @@
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ababab;
     display: block;
   }
 
@@ -30,29 +30,45 @@
     margin-bottom: -15px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
     display: block;
     transition: color 0.5s ease;
+  }
+
+  .sidenav ul {
+    list-style: none;
+    margin: 0%;
+    margin-left: -5%;
   }
 
   .sidenav .jobs:hover {
     color: #f1f1f1;
   }
 
+  .sidenav ul li {
+    margin-left: -5%;
+    margin-top: -8px;
+    color:#ababab;
+  }
+
+  .sidenav ul li.active a {
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+    color:#fff;
+  }
+
   .sidenav .work-list {
-    padding-left: 18%;
+    display: inline-block;
+    padding-left: 5%;
     text-decoration: none;
-    font-size: 19px;
-    color: #818181;
+    font-size: 19px;    
     display: block;
-    transition: color 0.5s ease;
   }
 
   .sidenav .work-list-element {
-    padding-left: 28%;
-    margin-top: -5px;
+    padding-left: 13%;
+    margin-top: -8px;
     font-size: 15px;
-    color: #818181;
   }
 
   .sidenav .work-list:hover {
