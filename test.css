@@ -1,203 +1,57 @@
-/* style.css */
 :root {
-    --linkheight: 2rem;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-ul {
-    background-color: rgb(0 0 0 / 0);
-}
-
-ul li {
-    padding-left: 1rem;
-}
-
-.section-nav {
-    display: flex;
-    flex-direction: row;
-    width: 15em;
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    padding-left: 0;
-    border-left: 1px solid #ddd;
-    background-color: rgb(0 0 0 / 0);
-}
-
-.section-nav a {
-    display: inline-block;
-    text-decoration: none;
-    line-height: 2rem;
-    padding: 0 1rem;
-    color: #202020;
-}
-
-.section-nav a:hover,
-.section-nav a:focus {
-    color: rgb(9, 153, 59);
-    text-decoration: underline;
-}
-
-h1 {
-    text-align: center;
-    font-weight: 1000;
-    color: rgb(9, 153, 59);
-    width: calc(100% - 7.5em);
-    margin: 1rem 0;
-}
-
-main {
-    width: 80%;
-    margin: 0 auto;
-}
-
-section {
-    padding-bottom: 20rem;
-
-}
-
-section:nth-of-type(even) {
-    padding-bottom: 20rem;
-}
-
-section:nth-of-type(1) {
+    --mainColor: #ff9800;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Merriweather', serif;
+  }
+  
+  #navbar {
+    background: #1E2640;
+  }
+  
+  #home {
+    background: #F2B705;
+    color: #1E2640;
+  }
+  
+  #bio {
+    background: #F21B42;
+    color: #F2B705;
+  }
+  
+  #work {
+    background: #1E2640;
+    color: #F21B42;
+  }
+  
+  #contact {
+    background: black;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 5em;
+  }
+  
+  .nav-item {
+    transition: background 200ms;
+  }
+  
+  .nav-link {
+    outline: none;
     background:
-        right 2rem 
-        top 2rem / 15em var(--linkheight) 
-        no-repeat 
-        linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(2) {
-    background:
-        right 2rem top 
-        calc(2 * var(--linkheight)) / 15em 
-        var(--linkheight) no-repeat 
-        linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(3) {
-    background: right 2rem top 
-                calc(3 * var(--linkheight)) / 15em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) {
-    padding-bottom: 0;
-    background: right 2rem top 
-                calc(4 * var(--linkheight)) / 15em 
-                var(--linkheight) no-repeat  
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) section:nth-of-type(1) {
-    background: right 2rem top 
-                calc(5 * var(--linkheight)) / 14em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) section:nth-of-type(2) {
-    background: right 2rem top 
-                calc(6 * var(--linkheight)) / 14em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) section:nth-of-type(3) {
-    background: right 2rem top 
-                calc(7 * var(--linkheight)) / 14em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) section:nth-of-type(4) {
-    background: right 2rem top 
-                calc(8 * var(--linkheight)) / 14em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) section:nth-of-type(5) {
-    background: right 2rem top 
-                calc(9 * var(--linkheight)) / 14em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) section:nth-of-type(6) {
-    background: right 2rem top 
-                calc(10 * var(--linkheight)) / 14em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) section:nth-of-type(7) {
-    background: right 2rem top 
-                calc(11 * var(--linkheight)) / 14em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(4) section:nth-of-type(8) {
-    background: right 2rem top  
-                calc(12 * var(--linkheight)) / 14em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(5) {
-    background: right 2rem top 
-                calc(13 * var(--linkheight)) / 15em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(6) {
-    background: right 2rem top 
-                calc(14 * var(--linkheight)) / 15em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(7) {
-    background: right 2rem top 
-                calc(15 * var(--linkheight)) / 15em 
-                var(--linkheight) no-repeat 
-                linear-gradient(#ccc, #ccc);
-
-}
-
-section:nth-of-type(n),
-section:nth-of-type(4) section:nth-of-type(n) {
-    background-attachment: fixed;
-}
+       linear-gradient(
+         to bottom, var(--mainColor) 0%,
+         var(--mainColor) 100%
+       );
+    background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 1px 1px;
+    transition: background-size .2s;
+  }
+  
+  .nav-item.active .nav-link {
+    background-size: 4px 50px;
+  }
