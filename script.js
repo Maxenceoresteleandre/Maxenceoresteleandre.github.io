@@ -1,8 +1,4 @@
 
-// scrollspy 
-$("#nav").scrollspy();
-
-
 // email button
 let submitButton = document.querySelector('#submit-button');
 function emailValidate(email) {
