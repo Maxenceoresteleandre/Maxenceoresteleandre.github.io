@@ -1,0 +1,1 @@
+$("#nav").scrollspy({ offset: -75 });

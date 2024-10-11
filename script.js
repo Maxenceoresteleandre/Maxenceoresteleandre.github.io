@@ -1,7 +1,6 @@
 
 // scrollspy 
-$("#nav").scrollspy({ offset: -75 });
-
+$("#nav").scrollspy();
 
 
 // email button
