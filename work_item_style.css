@@ -1,4 +1,25 @@
 
+.z-work-item {
+	position: relative;
+	scale: 1;
+	z-index: 0;
+	transform: rotate(0deg);
+	transition: transform 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background-color: #00000000;
+  }
+  
+.z-work-item:hover {
+	z-index: 99;
+	transform: 
+		scale(1.1);
+	background-color: #00000000;
+	border-radius: 15px;
+  }
+
 
 .work-item{
   background-color: transparent;
@@ -14,8 +35,13 @@
   border-radius: 10px;
 }
 
+.collapsible h3 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 .collapsible {
-    background-color: #777;
+    background-color:transparent;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -24,10 +50,22 @@
     text-align: left;
     outline: none;
     font-size: 15px;
+    
+    display: flex; 
+    justify-content:center; 
+    padding-left: 10%;
+    padding-right: 10%;
   }
+
+    .collapsible:hover {
+        background-color: transparent;
+        box-shadow: none;
+    }
   
   .collapsible .active {
-    background-color: #555;
+    background-color: transparent;
+    border: #555;
+    border-radius: 10px;
   }
   
   .collapsible:after {

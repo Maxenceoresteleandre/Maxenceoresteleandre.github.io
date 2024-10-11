@@ -18,15 +18,15 @@ window.onscroll = () => {
 	//console.log("section: ", section);
 	//console.log("menuLinksArray: ", menuLinksArray);
 
-
 	// for every <section>'s top-most point
 	sectionStartingPointArray.forEach((sectionStart, sectionIndex) => {
 		// check if the current downward scroll is on the middle of each <section>
 		// by using its top-most point minus its height divide by half
 		if (downwardScroll >= sectionStart - sectionHeight / 2) {
-			console.log("sectionStart: ", sectionStart);
-			console.log("menuLinksArray[sectionIndex].classList: ", menuLinksArray[sectionIndex].classList);
-			//if so, we remove all the 'active' classes on all menu links
+			//console.log("sectionStart: ", sectionStart);
+			//console.log("menuLinksArray[sectionIndex].classList: ", menuLinksArray[sectionIndex].classList);
+			
+			// if so, we remove all the 'active' classes on all menu links
 			menuLinksArray.forEach((menu) => {menu.classList.remove('active');});
 			//then add the 'active' class on the corresponding menu depending on which section the scroll is currently at
 			menuLinksArray[sectionIndex].classList.add('active');
