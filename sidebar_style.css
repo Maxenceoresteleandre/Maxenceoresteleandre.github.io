@@ -39,6 +39,26 @@
     color: #f1f1f1;
   }
 
+  .sidenav .work-list {
+    padding-left: 18%;
+    text-decoration: none;
+    font-size: 19px;
+    color: #818181;
+    display: block;
+    transition: color 0.5s ease;
+  }
+
+  .sidenav .work-list-element {
+    padding-left: 28%;
+    margin-top: -5px;
+    font-size: 15px;
+    color: #818181;
+  }
+
+  .sidenav .work-list:hover {
+    color: #f1f1f1;
+  }
+
   .sidewaviy {
 	position: relative;
 	margin-left: 20px;
