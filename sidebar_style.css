@@ -63,6 +63,18 @@
     font-size: 19px;    
   }
 
+  .sidenav .work-list.active {
+    padding-left: 5%;
+    text-decoration: none;
+    color:#fff;
+  }
+
+  .sidenav .work-list-element.active {
+    padding-left: 13%;
+    margin-top: -8px;
+    color:#fff;
+  }
+
   .sidenav .work-list-element {
     padding-left: 13%;
     margin-top: -8px;
