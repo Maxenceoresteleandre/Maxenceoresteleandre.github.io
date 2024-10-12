@@ -112,7 +112,8 @@ body {
 	color: #ffffff;
 	overflow: hidden;
 	
-	background: radial-gradient( rgb(0, 43, 33) 0%, black 100%);
+	background: radial-gradient( rgb(57, 0, 30) 0%, black 100%);
+	/* OLD: background: radial-gradient( rgb(0, 43, 33) 0%, black 100%); */
 	background-repeat:unset;
 	background-position: -450px -850px;
 	background-size: 250% 250%;
