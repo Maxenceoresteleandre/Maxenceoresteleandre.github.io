@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx21y1yvejinq"]
+
+[ext_resource type="PackedScene" uid="uid://cfaehcec4nawb" path="res://scenes/mouse_cursor.tscn" id="1_o2ryy"]
+
+[node name="Main" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.177626, 0.0187944, 0.10432, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 385.0
+offset_top = 239.0
+offset_right = -385.0
+offset_bottom = -239.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -105.0
+offset_right = 54.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.451389
+anchor_right = 0.545139
+anchor_bottom = 0.166667
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CPUParticles2D" parent="." instance=ExtResource("1_o2ryy")]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 87.0
+offset_bottom = 52.0
+text = "Up Left"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -87.0
+offset_bottom = 52.0
+grow_horizontal = 0
+text = "Up Right"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -52.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Down Right"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Label4" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -52.0
+offset_right = 87.0
+grow_vertical = 0
+text = "Down Left
+"
+vertical_alignment = 2
+
+[node name="Label5" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -11.5
+offset_right = 39.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Center"
+horizontal_alignment = 1
+vertical_alignment = 1
