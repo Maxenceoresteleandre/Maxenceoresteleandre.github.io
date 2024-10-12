@@ -440,8 +440,8 @@ button:hover {
 	display: inline-block;
 	font-size: 40px;
 	color: #fff;
-	animation: flip 5s infinite;
-	animation-delay: calc(.2s * var(--i) - 4s)
+	animation: flip 3s infinite;
+	animation-delay: calc(.1s * var(--i) - 4s)
   }
   @keyframes flip {
 	10%,30% {
