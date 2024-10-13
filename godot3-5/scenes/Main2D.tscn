@@ -28,8 +28,8 @@ texture = ExtResource( 4 )
 
 [node name="BackgroundShader2" type="Sprite" parent="."]
 material = ExtResource( 6 )
-position = Vector2( -287, 1343 )
-scale = Vector2( 97.7562, 47.8003 )
+position = Vector2( -1076, 3003 )
+scale = Vector2( 63.1906, 58.2237 )
 texture = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -53,12 +53,17 @@ color_ramp = SubResource( 3 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 material = ExtResource( 3 )
-position = Vector2( -534, -437 )
+position = Vector2( -509, -320 )
+polygon = PoolVector2Array( -218, -92, -98, -64, -40.2868, -91.4603, -52, -213, 23.2968, -121.714, 150, -182, -19, -40, -55, 17, -21, 50, 184, 46, 36, 82, 6.31995, 110.345, -28.7648, 194.822, 50, 263, 141, 295, 24, 279, -5.51563, 335.519, 1, 432, -23, 369, -0.596008, 267.065, -49.6845, 245.191, -103, 328, -71.9458, 240.381, -59, 134, -188.256, 86.695, -352, 180, -253, 63, -233.704, -22.4516, -408, -33 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+material = ExtResource( 3 )
+position = Vector2( 637, 287 )
 polygon = PoolVector2Array( -218, -92, -98, -64, -40.2868, -91.4603, -52, -213, 23.2968, -121.714, 150, -182, -19, -40, -55, 17, -21, 50, 184, 46, 36, 82, 6.31995, 110.345, -28.7648, 194.822, 50, 263, 141, 295, 24, 279, -5.51563, 335.519, 1, 432, -23, 369, -0.596008, 267.065, -49.6845, 245.191, -103, 328, -71.9458, 240.381, -59, 134, -188.256, 86.695, -352, 180, -253, 63, -233.704, -22.4516, -408, -33 )
 
 [node name="Polygon2D2" type="Polygon2D" parent="."]
 material = ExtResource( 3 )
-position = Vector2( 589, -486 )
+position = Vector2( 782, -388 )
 polygon = PoolVector2Array( -346, 113, -242, 98, -139, -24, 20, -40, 82, 14, 6, -9, -88, 17, -129, 73, -61, 120, 24, 82, -44, 145, 91, 199, 141, 146, 134, 222, -29, 280, -119, 203, -138, 268, -199, 151, -352, 280, -457, 230, -356, 237, -312, 182, -467, 123, -396, 34, -395, 73, -422, 105, -378, 104, -349, 69, -289, 69, -341, 94 )
 
 [node name="Polygon2D3" type="Polygon2D" parent="."]
@@ -70,6 +75,6 @@ polygon = PoolVector2Array( -105, 63, -68, -79, 57, 38, -70, 87 )
 [node name="ParticlePolygon" parent="." instance=ExtResource( 1 )]
 modulate = Color( 1, 1, 1, 1 )
 material = ExtResource( 5 )
-position = Vector2( 1188, -233 )
+position = Vector2( 1331, -341 )
 texture = SubResource( 2 )
 polygon = PoolVector2Array( -150, 14, -142, -96, 53.0001, -110, -71, 264 )

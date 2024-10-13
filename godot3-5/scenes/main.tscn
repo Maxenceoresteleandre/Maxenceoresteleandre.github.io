@@ -8,7 +8,6 @@
 
 [node name="BackgroundControl" type="CanvasLayer" parent="."]
 layer = -1
-visible = false
 
 [node name="Background" type="ColorRect" parent="BackgroundControl"]
 anchor_right = 1.0
@@ -16,7 +15,6 @@ anchor_bottom = 1.0
 color = Color( 0.0666667, 0, 0.0509804, 1 )
 
 [node name="MainControl" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="TextureRect" type="TextureRect" parent="MainControl"]
 anchor_left = 0.295898
