@@ -3,13 +3,12 @@
 [ext_resource path="res://scenes/objects/ParticlePolygon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/images/white-circle.png" type="Texture" id=2]
 [ext_resource path="res://resources/materials/star_sky_mat.tres" type="Material" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://resources/materials/swirly_background.tres" type="Material" id=5]
 
-[sub_resource type="Gradient" id=4]
-offsets = PoolRealArray( 0, 0.332402, 1 )
-colors = PoolColorArray( 0, 0, 0, 1, 0.146629, 0, 0.0916722, 1, 0.225293, 0, 0.140852, 1 )
-
-[sub_resource type="GradientTexture2D" id=5]
-gradient = SubResource( 4 )
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.22905, 0.829609, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.05 )
@@ -18,23 +17,16 @@ colors = PoolColorArray( 0.570313, 0.570313, 0.570313, 1, 1, 1, 1, 1 )
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
 
-[sub_resource type="Gradient" id=3]
-offsets = PoolRealArray( 0, 0.22905, 0.829609, 1 )
-colors = PoolColorArray( 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
-
 [node name="Main2D" type="Node2D"]
 
-[node name="Icon" type="Sprite" parent="."]
-position = Vector2( -29, -92 )
-rotation = -1.895
-scale = Vector2( 18.9063, 22.7476 )
-texture = SubResource( 5 )
+[node name="BackgroundShader" type="Sprite" parent="."]
+material = ExtResource( 5 )
+position = Vector2( -118.009, -119.009 )
+scale = Vector2( 34.6496, 31.5451 )
+texture = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-
-[node name="ParticlePolygon" parent="." instance=ExtResource( 1 )]
-texture = SubResource( 2 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 amount = 16
@@ -54,7 +46,7 @@ color_ramp = SubResource( 3 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 material = ExtResource( 3 )
-position = Vector2( -303, -369 )
+position = Vector2( -233, -347 )
 polygon = PoolVector2Array( -218, -92, -98, -64, -40.2868, -91.4603, -52, -213, 23.2968, -121.714, 150, -182, -19, -40, -55, 17, -21, 50, 184, 46, 36, 82, 6.31995, 110.345, -28.7648, 194.822, 50, 263, 141, 295, 24, 279, -5.51563, 335.519, 1, 432, -23, 369, -0.596008, 267.065, -49.6845, 245.191, -103, 328, -71.9458, 240.381, -59, 134, -188.256, 86.695, -352, 180, -253, 63, -233.704, -22.4516, -408, -33 )
 
 [node name="Polygon2D2" type="Polygon2D" parent="."]
@@ -67,3 +59,10 @@ material = ExtResource( 3 )
 position = Vector2( -44, 179 )
 rotation = -0.444006
 polygon = PoolVector2Array( -105, 63, -68, -79, 57, 38, -70, 87 )
+
+[node name="ParticlePolygon" parent="." instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 1 )
+material = ExtResource( 5 )
+position = Vector2( 1188, -233 )
+texture = SubResource( 2 )
+polygon = PoolVector2Array( -150, 14, -142, -96, 53.0001, -110, -71, 264 )

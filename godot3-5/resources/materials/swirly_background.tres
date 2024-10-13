@@ -1,0 +1,50 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=6]
+code = "shader_type canvas_item;
+// Background Noise
+
+uniform mat2 _rot = mat2( vec2(0.5, 0.86), vec2(-0.86, 0.5));
+uniform float _speed = 0.175;
+uniform vec4 color : hint_color = vec4(0.26, 0.0, 0.15, 1.0);
+
+float wave(vec2 p) {
+	float v = sin(p.x+sin(p.y) + sin(p.y*.43));
+	return v*v;
+}
+
+float map(float time, vec2 p) {
+	float v = 0.0;
+	v += wave(p);
+	p.x += time * _speed;
+	p = p * _rot;
+	v += wave(p);
+	p.x += time * _speed * .17;
+	p = p * _rot;
+	v += wave(p);
+	v = abs(1.5 - v);
+
+	return v;
+}
+
+void fragment()
+{
+	vec2 resolution = 1.0 / SCREEN_PIXEL_SIZE;
+	vec2 uv = (FRAGCOORD.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+	vec2 p = normalize(vec3(uv.xy, 2.3)).xy * 10.0;
+	p.y += TIME * _speed * 0.3;
+	float v=map(TIME, p);
+	
+	COLOR.rgb = vec3(
+		(v * color.r), 
+		(v * color.g), 
+		(v * color.b)
+	);
+}
+"
+
+[resource]
+shader = SubResource( 6 )
+shader_param/_rot = Transform2D( 0.5, -0.86, 0.86, 0.5, 0, 0 )
+shader_param/_speed = 0.175
+shader_param/color = Color( 0.26, 0, 0.15, 1 )
