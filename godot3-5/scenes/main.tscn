@@ -1,4 +1,7 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resources/images/profile-picture.jpg" type="Texture" id=1]
+[ext_resource path="res://resources/themes/name_theme.tres" type="Theme" id=2]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -6,3 +9,32 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.239216, 0, 0.180392, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.220703
+anchor_top = 0.0933333
+anchor_right = 0.364258
+anchor_bottom = 0.421667
+margin_bottom = 1.52588e-05
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FirstName" type="RichTextLabel" parent="."]
+margin_left = 425.0
+margin_top = 80.0
+margin_right = 586.0
+margin_bottom = 120.0
+theme = ExtResource( 2 )
+text = "Maxence"
+
+[node name="LastName" type="RichTextLabel" parent="."]
+margin_left = 456.0
+margin_top = 143.0
+margin_right = 621.0
+margin_bottom = 188.0
+theme = ExtResource( 2 )
+text = "Maire"
