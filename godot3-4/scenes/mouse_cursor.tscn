@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/mouse_cursor.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+amount = 12
+local_coords = false
+texture = ExtResource( 2 )
+scale_amount = 0.4
+script = ExtResource( 1 )
