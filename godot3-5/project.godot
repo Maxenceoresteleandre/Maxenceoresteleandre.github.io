@@ -40,6 +40,13 @@ config/icon="res://icon.png"
 
 GlobalVariables="*res://scripts/GlobalVariables.gd"
 
+[debug]
+
+gdscript/warnings/unsafe_property_access=true
+gdscript/warnings/unsafe_method_access=true
+gdscript/warnings/unsafe_cast=true
+gdscript/warnings/unsafe_call_argument=true
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

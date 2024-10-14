@@ -3,22 +3,25 @@ extends Polygon2D
 
 export var is_opaque := false
 
+onready var polygon_bg : Polygon2D = $PolygonBG
+onready var collision_polygon : CollisionPolygon2D = $Area2D/CollisionPolygon2D
+onready var line2D : Line2D = $Line2D
+
 func _ready() -> void:
 	draw_object()
-	$PolygonBG.visible = is_opaque
+	polygon_bg.visible = is_opaque
 	if not Engine.editor_hint and not is_opaque:
-		$PolygonBG.queue_free()
+		polygon_bg.queue_free()
 
 func draw_object() -> void:
-	$Area2D/CollisionPolygon2D.polygon = polygon
+	collision_polygon.polygon = polygon
 	if is_opaque:
-		$PolygonBG.polygon = polygon
-	$Line2D.points = polygon
+		polygon_bg.polygon = polygon
+	line2D.points = polygon
 	if len(polygon) > 0:
-		$Line2D.add_point(polygon[0])
+		line2D.add_point(polygon[0])
 
 func _on_Area2D_body_entered(body : Node2D) -> void:
-	$Line2D.queue_free()
 	if body.has_method("in_water"):
 		body.in_water()
 

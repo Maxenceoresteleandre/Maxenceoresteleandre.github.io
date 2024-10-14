@@ -54,17 +54,14 @@ func _ready() -> void:
 func set_player_control(control : bool) -> void:
 	has_control = control
 
-func screen_shake():
-	PlayerCamera.screen_shake()
-
-func in_water():
+func in_water() -> void:
 	underwater_int += 1
 	dashing = false
 	if underwater_int > 0:
 		underwater = true
 		emit_signal("enter_water")
 
-func out_water():
+func out_water() -> void:
 	underwater_int -= 1
 	if underwater_int <= 0:
 		underwater_int = 0
@@ -77,26 +74,26 @@ func out_water():
 			is_looking_right = 1
 		emit_signal("exit_water")
 
-func exit_water_gameplay():
+func exit_water_gameplay() -> void:
 	if in_torpedo:
 		velocity = velocity.normalized() * torpedo_speed * 0.75
 	reset_dash()
 	reset_torpedo()
 
-func is_dashing():
+func is_dashing() -> bool:
 	return dashing
 
-func dash():
+func dash() -> void:
 	can_dash = false
 	dashing = true
 	update_finger_pos()
 	velocity = max(dash_speed_bonus, velocity.length() + dash_speed_bonus/1.5) * finger.normalized()
 
-func reset_dash():
+func reset_dash() -> void:
 	dashing = false
 	can_dash = true
 
-func reset_torpedo():
+func reset_torpedo() -> void:
 	dashing = false
 	in_torpedo = false
 	if has_torpedo:
@@ -105,14 +102,14 @@ func reset_torpedo():
 	else:
 		can_torpedo = false
 
-func _input(event : InputEvent):
+func _input(event : InputEvent) -> void:
 	if has_control:
 		if (event.is_action_pressed("click")):
 			is_click_pressed = true
 		elif (event.is_action_released("click")):
 			is_click_pressed = false
 
-func reset_controls():
+func reset_controls() -> void:
 	velocity = Vector2.ZERO
 	can_super_dash = false
 	can_torpedo = true
@@ -138,15 +135,15 @@ func _physics_process(delta : float) -> void:
 		ControlPaused:
 			pass # don't move, unaffected by forces
 
-func inactive_controls(_delta : float):
+func inactive_controls(_delta : float) -> void:
 	move_and_slide(physic_force + velocity / 2.0, Vector2(0, -1))
 
-func set_control_mode(new_mode: int):
+func set_control_mode(new_mode: int) -> void:
 	control_mode = new_mode
 	#if new_mode == ControlPaused:
 	#	velocity = Vector2.ZERO
 
-func enter_super_dash_mode():
+func enter_super_dash_mode() -> void:
 	if control_mode == ControlSuperDash:
 		return
 	$SuperDashTimer.start(SUPER_DASH_TIME)
@@ -156,7 +153,7 @@ func enter_super_dash_mode():
 	can_super_dash = true
 	PlayerCamera.set_camera_zoom(PlayerCamera.get_camera_zoom() - SUPER_DASH_ZOOM, 0.05)
 
-func exit_super_dash_mode():
+func exit_super_dash_mode() -> void:
 	$Skeleton.set_anim_speed(1.0)
 	Engine.time_scale = 1.0
 	control_mode = ControlNormal
@@ -165,7 +162,7 @@ func exit_super_dash_mode():
 	can_dash = true
 	PlayerCamera.set_camera_zoom(PlayerCamera.get_camera_zoom() + SUPER_DASH_ZOOM, 0.1)
 
-func super_dash():
+func super_dash() -> void:
 	can_super_dash = false 
 	dashing = true
 	PlayerCamera.set_camera_zoom(PlayerCamera.get_camera_zoom() - 0.25, 0.01)
@@ -204,7 +201,7 @@ func super_dash():
 		yield(get_tree().create_timer(0.05), "timeout")
 		can_super_dash = true
 
-func super_dash_controls(delta : float):
+func super_dash_controls(delta : float) -> void:
 	if can_super_dash:
 		if is_click_pressed and Input.is_action_just_pressed("click"):
 			super_dash()
@@ -217,10 +214,10 @@ func super_dash_controls(delta : float):
 		fish_skeleton.play(fish_skeleton.SuperIdle)
 		move_and_slide(physic_force + velocity / 2.0, Vector2(0, -1))
 
-func compute_gravity():
+func compute_gravity() -> void:
 	velocity.y = min(velocity.y+gravity, max_fall_speed)
 
-func normal_controls(delta : float):
+func normal_controls(delta : float) -> void:
 	if not underwater:
 		if is_click_pressed and Input.is_action_just_pressed("click") and can_dash and has_dash:
 			dash()
@@ -271,12 +268,12 @@ func normal_controls(delta : float):
 			fish_skeleton.set_playback_speed(max(0.5, (velocity.length())/500))
 		move_and_slide(physic_force + velocity, Vector2(0, -1))
 
-func exit_torpedo(collision_normal : Vector2):
+func exit_torpedo(collision_normal : Vector2) -> void:
 	velocity = (torpedo_speed * torpedo_direction).reflect(collision_normal.tangent())
 	look_at(global_position + velocity)
 	reset_torpedo()
 
-func enter_torpedo():
+func enter_torpedo() -> void:
 	#fish_skeleton.play(fish_skeleton.SuperIdle)
 	#yield(get_tree().create_timer(1.0),"timeout")
 	torpedo_direction = finger.normalized()
@@ -288,13 +285,13 @@ func enter_torpedo():
 	in_torpedo = true
 	dashing = true
 
-func boing_collision(normal : Vector2):
+func boing_collision(normal : Vector2) -> void:
 	velocity = velocity.reflect((normal).tangent())
 	boing_pitch = min(boing_pitch+BOING_VARIATION, MAX_BOING_PITCH)
 	$AudioStreamJump.pitch_scale = boing_pitch
 	$AudioStreamJump.play(0)
 
-func update_finger_pos():
+func update_finger_pos() -> void:
 	finger = (get_global_mouse_position()-global_position)
 	if finger.length_squared() < 100.0:
 		finger = Vector2.ZERO
@@ -302,9 +299,9 @@ func update_finger_pos():
 		finger = finger.normalized() * min(finger.length()/10, MAX_FINGER_DISTANCE)
 		look_at(get_global_mouse_position())
 
-func _on_DoubleTapTimer_timeout():
+func _on_DoubleTapTimer_timeout() -> void:
 	has_first_tapped = false
 
-func initiate_double_tap():
+func initiate_double_tap() -> void:
 	has_first_tapped = true
 	$DoubleTapTimer.start()

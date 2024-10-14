@@ -23,13 +23,13 @@ var bound_right : float = 10000000
 var bound_bottom : float = 10000000
 
 
-func _ready():
+func _ready() -> void:
 	GlobalVariables.player_camera = self
 	yield(get_tree(), "physics_frame")
 	target = GlobalVariables.player
 	following = true
 
-func set_bound(limit : int, pos : Vector2, update_limits := true):
+func set_bound(limit : int, pos : Vector2, update_limits := true) -> void:
 	match limit:
 		Limits.Left:
 			bound_left_pos = pos.x
@@ -42,7 +42,7 @@ func set_bound(limit : int, pos : Vector2, update_limits := true):
 	if update_limits:
 		update_bounds()
 
-func update_bounds():
+func update_bounds() -> void:
 	# Get the canvas transform
 	var ctrans = get_canvas_transform()
 	# The canvas transform applies to everything drawn,
@@ -67,15 +67,15 @@ func update_bounds():
 		bound_right  = bound_right_pos  - screen_size.y/(2.0)#/zoom.x)
 		bound_bottom = bound_bottom_pos - screen_size.x/(2.0)#/zoom.y)
 
-func attach(new_anchor : Area2D, new_zoom : float):
+func attach(new_anchor : Area2D, new_zoom : float) -> void:
 	if zoom.x != new_zoom:
 		set_new_zoom(new_zoom * default_zoom)
 
-func add_to_anchors(new_anchor : Area2D):
+func add_to_anchors(new_anchor : Area2D) -> void:
 	current_anchor.append(new_anchor)
 	cam_anchor = new_anchor
 
-func detach(old_anchor : Area2D):
+func detach(old_anchor : Area2D) -> void:
 	if old_anchor in current_anchor:
 		current_anchor.erase(old_anchor) 
 		if len(current_anchor) == 0:
@@ -89,7 +89,7 @@ func detach(old_anchor : Area2D):
 			if zoom.x != cam_anchor.camera_zoom:
 				set_new_zoom(cam_anchor.camera_zoom * default_zoom)
 
-func set_new_zoom(new_zoom : float, time : float  = 0.75):
+func set_new_zoom(new_zoom : float, time : float  = 0.75) -> void:
 	if rushing:
 		zoom = Vector2(new_zoom, new_zoom)
 	else:
@@ -99,7 +99,7 @@ func set_new_zoom(new_zoom : float, time : float  = 0.75):
 		yield($Tween, "tween_all_completed")
 	update_bounds()
 
-func _process(_delta):
+func _process(_delta : float) -> void:
 	if following:
 		var target_pos : Vector2 = target.global_position
 		global_position = Vector2(
@@ -107,16 +107,16 @@ func _process(_delta):
 			min(max(target_pos.y, bound_top), bound_bottom)
 		)
 
-func set_target(new_target : Node2D):
+func set_target(new_target : Node2D) -> void:
 	following = true
 	set_process(true)
 	target = new_target
 
-func stop_follow():
+func stop_follow() -> void:
 	following = false
 	set_process(false)
 
-func move_to(point : Vector2, time : float = 0.5):
+func move_to(point : Vector2, time : float = 0.5) -> void:
 	stop_follow()
 	if time <= 0.0:
 		position = point
@@ -125,10 +125,10 @@ func move_to(point : Vector2, time : float = 0.5):
 			Tween.TRANS_CUBIC, Tween.EASE_OUT)
 		$Tween.start()
 
-func get_camera_zoom():
+func get_camera_zoom() -> float:
 	return (zoom.x + zoom.y) / 2.0
 
-func set_camera_zoom(new_zoom : float = 1.0, time : float = 0.5):
+func set_camera_zoom(new_zoom : float = 1.0, time : float = 0.5) -> void:
 	if time <= 0.0:
 		zoom = Vector2(new_zoom, new_zoom)
 	else:
