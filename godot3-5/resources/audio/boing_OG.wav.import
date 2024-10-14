@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/boing_OG.wav-02136d34da3821389ea92d2ce8ee9409.sample"
+
+[deps]
+
+source_file="res://resources/audio/boing_OG.wav"
+dest_files=[ "res://.import/boing_OG.wav-02136d34da3821389ea92d2ce8ee9409.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -16,8 +16,8 @@ enum {ControlNormal, ControlSuperDash, ControlInactive, ControlPaused}
 
 export var player_camera_path : NodePath = ""
 
-onready var has_dash : bool = GB.dash_unlocked
-onready var has_torpedo : bool = GB.torpedo_unlocked
+export var has_dash : bool = true
+export var has_torpedo : bool = true
 
 var gravity = 10              #10 min
 var friction = 0.35
@@ -31,7 +31,7 @@ var torpedo_speed := default_torpedo_speed
 var can_torpedo := false
 var torpedo_direction : Vector2
 var in_torpedo := false
-var PlayerCamera : DynamicCamera 
+onready var PlayerCamera : DynamicCamera 
 var control_mode : int = ControlPaused
 var can_dash := false
 var has_control := true
@@ -48,14 +48,10 @@ var dashing := false
 var has_first_tapped := false
 var is_click_pressed := false
 
-func _ready():
-	GB.player = self
-	PlayerCamera = get_node(player_camera_path)
-	has_dash = GB.dash_unlocked
-	has_torpedo = GB.torpedo_unlocked
-	can_torpedo = GB.torpedo_unlocked
+func _ready() -> void:
+	GlobalVariables.player = self
 
-func set_player_control(control : bool):
+func set_player_control(control : bool) -> void:
 	has_control = control
 
 func screen_shake():
@@ -305,27 +301,6 @@ func update_finger_pos():
 	else:
 		finger = finger.normalized() * min(finger.length()/10, MAX_FINGER_DISTANCE)
 		look_at(get_global_mouse_position())
-
-func death():
-	if dead:
-		return
-	dead = true
-	$Skeleton.set_anim_speed(1.0)
-	Engine.time_scale = 1.0
-	reset_controls()
-	control_mode = ControlPaused
-	$Skeleton/Animation.stop(false)
-	modulate = Color(100.0, 1.0, 1.0)
-	GB.game_manager.respawn()
-	var current_zoom : float = PlayerCamera.get_camera_zoom()
-	PlayerCamera.set_camera_zoom(0.75, 0.05)
-	yield(GB.game_manager, "player_respawn")
-	PlayerCamera.set_target(self)
-	PlayerCamera.set_camera_zoom(current_zoom, 0.25)
-	rotation_degrees = 180.0 + PlayerCamera.rotation_degrees
-	modulate = Color.white
-	control_mode = ControlNormal
-	dead = false
 
 func _on_DoubleTapTimer_timeout():
 	has_first_tapped = false

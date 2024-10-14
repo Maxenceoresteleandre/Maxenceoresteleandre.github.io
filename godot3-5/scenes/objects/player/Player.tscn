@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/objects/player/Player_skeleton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/audio/boing_OG.wav" type="AudioStream" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 16.3531
+
+[node name="Player" type="KinematicBody2D"]
+z_index = 3
+collision_layer = 3
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+rotation = -1.5708
+shape = SubResource( 1 )
+
+[node name="Skeleton" parent="." instance=ExtResource( 2 )]
+
+[node name="AudioStreamJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+pitch_scale = 0.9
+
+[node name="Poop_position" type="Position2D" parent="."]
+position = Vector2( -40.8943, -0.451866 )
+
+[node name="SuperDashTimer" type="Timer" parent="."]
+wait_time = 120.0
+one_shot = true
+
+[node name="SuperDashRaycast" type="RayCast2D" parent="."]
+cast_to = Vector2( 0, 0 )
+
+[node name="DoubleTapTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="DoubleTapTimer" to="." method="_on_DoubleTapTimer_timeout"]

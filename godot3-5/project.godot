@@ -9,12 +9,24 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Camera2D",
+"class": "DynamicCamera",
+"language": "GDScript",
+"path": "res://scripts/PlayerCamera.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "DynamicObject",
+"language": "GDScript",
+"path": "res://scripts/DynamicObject.gd"
+}, {
 "base": "DynamicObject",
 "class": "Player",
 "language": "GDScript",
 "path": "res://scripts/Player.gd"
 } ]
 _global_script_class_icons={
+"DynamicCamera": "",
+"DynamicObject": "",
 "Player": ""
 }
 
@@ -23,6 +35,10 @@ _global_script_class_icons={
 config/name="MaxenceMairePortfolio"
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GlobalVariables="*res://scripts/GlobalVariables.gd"
 
 [gui]
 
