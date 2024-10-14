@@ -23,4 +23,4 @@ void fragment(){
 [resource]
 shader = SubResource( 1 )
 shader_param/water_color = Color( 0.2, 0.619608, 1, 1 )
-shader_param/intensity = 100000.0
+shader_param/intensity = 1.0
