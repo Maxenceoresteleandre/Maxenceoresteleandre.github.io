@@ -27,7 +27,10 @@ func _ready():
 	GlobalVariables.player_camera = self
 	if get_node(camera_target) != null:
 		target = get_node(camera_target)
-		following = true
+	else:
+		yield(get_tree(), "physics_frame")
+		target = GlobalVariables.player
+	following = true
 
 func set_bound(limit : int, pos : Vector2, update_limits := true):
 	match limit:

@@ -32,7 +32,7 @@ var can_torpedo := false
 var torpedo_direction : Vector2
 var in_torpedo := false
 onready var PlayerCamera : DynamicCamera 
-var control_mode : int = ControlPaused
+var control_mode : int = ControlNormal
 var can_dash := false
 var has_control := true
 var finger = Vector2.ZERO
@@ -105,7 +105,7 @@ func reset_torpedo():
 	else:
 		can_torpedo = false
 
-func _unhandled_input(event : InputEvent):
+func _input(event : InputEvent):
 	if has_control:
 		if (event.is_action_pressed("click")):
 			is_click_pressed = true
@@ -121,7 +121,7 @@ func reset_controls():
 	is_click_pressed = false
 	has_first_tapped = false
 
-func _physics_process(delta):
+func _physics_process(delta : float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
 	if velocity.x < 0:
