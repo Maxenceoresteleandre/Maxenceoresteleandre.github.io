@@ -58,6 +58,8 @@ func screen_shake():
 	PlayerCamera.screen_shake()
 
 func in_water():
+	print("enter water !!!! ")
+	self.position.y -= 200.0
 	underwater_int += 1
 	dashing = false
 	if underwater_int > 0:
