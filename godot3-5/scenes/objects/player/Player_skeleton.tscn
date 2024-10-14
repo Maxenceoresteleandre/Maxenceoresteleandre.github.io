@@ -521,47 +521,47 @@ scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 1 )
 
 [node name="Body" type="Sprite" parent="." index="0"]
-rotation = -0.0711189
+rotation = -0.0872665
 texture = ExtResource( 2 )
 
 [node name="Head" type="Sprite" parent="Body" index="0"]
 show_behind_parent = true
 position = Vector2( 0.869019, -101.221 )
-rotation = -0.116169
+rotation = -0.0872665
 texture = ExtResource( 5 )
 offset = Vector2( 0, -95 )
 
 [node name="Fin_Up" type="Sprite" parent="Body/Head" index="0"]
 show_behind_parent = true
 position = Vector2( 63.1614, -66.7433 )
-rotation = 0.787434
+rotation = 0.791965
 z_index = -1
 texture = ExtResource( 8 )
 offset = Vector2( 115, 107 )
 
 [node name="Arm_R" type="Sprite" parent="Body" index="1"]
 position = Vector2( 61.4854, -107.269 )
-rotation = 0.285065
+rotation = 0.261799
 texture = ExtResource( 6 )
 offset = Vector2( 41, 65 )
 
 [node name="Arm_L" type="Sprite" parent="Body" index="2"]
 position = Vector2( -54.5336, -93.0442 )
-rotation = -0.285761
+rotation = -0.261799
 z_index = -2
 texture = ExtResource( 9 )
 offset = Vector2( -45, 65 )
 
 [node name="Leg_L" type="Sprite" parent="Body" index="3"]
 position = Vector2( -32.3576, 110.212 )
-rotation = -0.382613
+rotation = -0.349066
 z_index = -1
 texture = ExtResource( 4 )
 offset = Vector2( -41, 85 )
 
 [node name="Leg_R" type="Sprite" parent="Body" index="4"]
 position = Vector2( 21.4712, 110.788 )
-rotation = 0.199855
+rotation = 0.20944
 z_index = -1
 texture = ExtResource( 7 )
 offset = Vector2( 31, 90 )
@@ -569,7 +569,7 @@ offset = Vector2( 31, 90 )
 [node name="Fin_Down" type="Sprite" parent="Body" index="5"]
 show_behind_parent = true
 position = Vector2( 52.9282, 52.8718 )
-rotation = 0.786747
+rotation = 0.790344
 z_index = -1
 texture = ExtResource( 3 )
 offset = Vector2( 90, 78 )

@@ -1,7 +1,7 @@
 tool
 extends Polygon2D
 
-onready var collision_polygon2d : Polygon2D = $StaticBody2D/CollisionPolygon2D
+onready var collision_polygon2d : CollisionPolygon2D = $StaticBody2D/CollisionPolygon2D
 onready var line2d : Line2D = $Line2D
 
 func draw_object() -> void:
