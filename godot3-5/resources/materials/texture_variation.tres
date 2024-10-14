@@ -72,7 +72,7 @@ void fragment( )
 
 [resource]
 shader = SubResource( 1 )
-shader_param/light_color = Color( 0.0313726, 0.0705882, 0.427451, 1 )
+shader_param/light_color = Color( 0.0392157, 0.0823529, 0.494118, 1 )
 shader_param/dark_color = Color( 0, 0, 0, 1 )
 shader_param/front_random_scale = 3.0
 shader_param/back_random_scale = -5.0

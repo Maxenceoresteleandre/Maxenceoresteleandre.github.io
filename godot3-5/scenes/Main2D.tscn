@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/objects/player/PlayerCamera.tscn" type="PackedScene" id=1]
-[ext_resource path="res://resources/images/white-circle.png" type="Texture" id=2]
 [ext_resource path="res://resources/materials/star_sky_mat.tres" type="Material" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://resources/materials/swirly_background.tres" type="Material" id=5]
@@ -13,15 +12,11 @@
 [ext_resource path="res://resources/images/textures/light_texture.png" type="Texture" id=11]
 
 [sub_resource type="Gradient" id=6]
-offsets = PoolRealArray( 0, 0.644144, 0.977477 )
+offsets = PoolRealArray( 0, 0.542793, 0.977477 )
 colors = PoolColorArray( 0.0487976, 0, 0.480469, 1, 0.385242, 0.201168, 0.527767, 1, 1, 0.539063, 0, 1 )
 
 [sub_resource type="GradientTexture" id=7]
 gradient = SubResource( 6 )
-
-[sub_resource type="Gradient" id=3]
-offsets = PoolRealArray( 0, 0.22905, 0.829609, 1 )
-colors = PoolColorArray( 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 
 [node name="Main2D" type="Node2D"]
 
@@ -33,14 +28,14 @@ texture = ExtResource( 4 )
 
 [node name="SkyBackground" type="Sprite" parent="."]
 modulate = Color( 0.45098, 0.45098, 0.45098, 1 )
-position = Vector2( 1911.92, -8398.16 )
+position = Vector2( 1990, -3820 )
 rotation = 1.52925
-scale = Vector2( 7.37698, 23014.2 )
+scale = Vector2( 3.78936, 23014.2 )
 texture = SubResource( 7 )
 
 [node name="LightTexture" type="Sprite" parent="."]
 modulate = Color( 1, 0.960784, 0, 1 )
-position = Vector2( -2564, -959 )
+position = Vector2( -2435, -146 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 11 )
 
@@ -49,36 +44,18 @@ modulate = Color( 0.32549, 0.32549, 0.32549, 1 )
 material = ExtResource( 10 )
 texture = ExtResource( 9 )
 texture_scale = Vector2( 0.5, 0.5 )
-polygon = PoolVector2Array( -15299, -659, -4139, 283, -2650, -873, -2437, -901, -2201, -1089, -2102, -1287, -1870, -1876, -1622, -2039, -1538, -2239, -1572, -2630, -1254, -3018, -768, -3530, -598, -4090, -202, -4496, -163, -4923, -131, -6623, -67, -9087, 6777, -9723, 8704, -10282, 8974, -11188, 10112, -11921, 11037, -11921, 11384, -11381, 23193, -10299, 23215, 24612, -11165, 24744 )
+polygon = PoolVector2Array( -15299, -659, -3854, 26, -527, 26, -309, -138, -53, -438, -26, -687, 77, -854, 27, -1068, -142, -1204, -202, -1388, 7, -1840, -310, -3770, 4614, -3742, 6777, -9723, 8704, -10282, 8974, -11188, 10112, -11921, 11037, -11921, 11384, -11381, 23193, -10299, 23215, 24612, -11165, 24744 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( -141, -1219 )
+position = Vector2( -1252, 91 )
 
 [node name="Water" parent="." instance=ExtResource( 8 )]
 polygon = PoolVector2Array( -15603.9, -47, 8747.06, 71, 8678.06, -5481, 21730.1, -5446, 21326.1, 26726, -16339.9, 26673 )
 
 [node name="PlayerCamera" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1419, -542 )
+position = Vector2( -1170, 63 )
 z_index = 100
-zoom = Vector2( 4, 4 )
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="PlayerCamera"]
-z_index = 100
-amount = 16
-lifetime = 4.0
-randomness = 0.5
-lifetime_randomness = 0.1
-local_coords = false
-texture = ExtResource( 2 )
-emission_shape = 2
-emission_rect_extents = Vector2( 512, 300 )
-gravity = Vector2( 0, -98 )
-initial_velocity = 100.0
-initial_velocity_random = 1.0
-scale_amount = 0.1
-scale_amount_random = 0.1
-color = Color( 0.160784, 0, 0.105882, 0.156863 )
-color_ramp = SubResource( 3 )
+zoom = Vector2( 6, 6 )
 
 [node name="Wall" parent="." instance=ExtResource( 7 )]
 material = ExtResource( 3 )
@@ -106,24 +83,24 @@ polygon = PoolVector2Array( -346, 113, -242, 98, -139, -24, 20, -40, 82, 14, 6, 
 
 [node name="Wall5" parent="." instance=ExtResource( 7 )]
 material = ExtResource( 3 )
-position = Vector2( -334, 708 )
+position = Vector2( -246, 829 )
 z_index = 20
-polygon = PoolVector2Array( -35, -479, 298, -402, 111, -201, 43, -238 )
+polygon = PoolVector2Array( -35, -479, -218, -1012, -170, -1469, 301, -1615, 974, -1018, 298, -402, 111, -201, 43, -238 )
 
 [node name="WallGrottoBody" parent="." instance=ExtResource( 7 )]
-modulate = Color( 0.282353, 0, 0.223529, 1 )
+modulate = Color( 0.568627, 0, 0.45098, 1 )
 position = Vector2( 1734, -1386 )
 z_index = 15
 polygon = PoolVector2Array( -19109, 29132, -21539, -9946, -9683, -13354, -5807, -1620, -5369, -850, -5381, -231, -4889, 474, -4422, 714, -4698, 1347, -4534, 2061, -4732, 2727, -7679, 4851, -15137, 1903, -13978, 8864, -8543, 9372, -8848, 24306, -1633.04, 24970, -669, 21258, 1769, 21512, 2786.84, 25032.8, 19548, 25271, 20107, -10033, 24018, -10795, 22850, 29233 )
 
 [node name="WallGrottoTop" parent="." instance=ExtResource( 7 )]
-modulate = Color( 0.282353, 0, 0.223529, 1 )
+modulate = Color( 0.568627, 0, 0.45098, 1 )
 z_index = 16
-polygon = PoolVector2Array( 8664, 5294, 7371, 7054, 2759, 416, 2161, -41, 1823, -917, 1083, -1570, 61, -1493, -479, -1701, -495, -6164, -352, -9469, 2626, -8035, 4979.48, -7655.18, 10783, -10905, 12830, -15288, 4749, -15539, -7428, -13563, -9179, -8192, -21446, -7735, -22083, -18556, 26372, -18987, 24253, -9002, 15893, -9522, 10963, -8930 )
+polygon = PoolVector2Array( 8664, 5294, 7371, 7054, 2759, 416, 2161, -41, 1823, -917, 1083, -1570, 61, -1493, -479, -1701, -906, -3117, -711, -4082, 639, -3185, 2358, -3325, 4154, -4334, 5360, -5909, 2876, -7471, -6018, -7083, -9179, -8192, -21446, -7735, -22083, -18556, 26372, -18987, 24253, -9002, 15893, -9522, 10963, -8930 )
 
 [node name="Water2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 2174, -8409 )
-polygon = PoolVector2Array( 6566.06, -546, 5733.06, 1377, -654.94, 1150, -1835.94, -558 )
+position = Vector2( 1196, -3424 )
+polygon = PoolVector2Array( 3059, -523, 2484, 173, -1209, 285, -1835.94, -558 )
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 1464, -168 )
