@@ -71,9 +71,8 @@ void fragment( )
 }"
 
 [resource]
-resource_local_to_scene = true
 shader = SubResource( 1 )
-shader_param/light_color = Color( 0.631373, 0, 0.415686, 1 )
+shader_param/light_color = Color( 0.0313726, 0.0705882, 0.427451, 1 )
 shader_param/dark_color = Color( 0, 0, 0, 1 )
 shader_param/front_random_scale = 3.0
 shader_param/back_random_scale = -5.0

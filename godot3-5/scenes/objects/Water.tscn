@@ -44,6 +44,7 @@ gradient = SubResource( 1 )
 texture = ExtResource( 2 )
 texture_mode = 1
 joint_mode = 2
+antialiased = true
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/objects/player/PlayerCamera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/images/white-circle.png" type="Texture" id=2]
@@ -10,6 +10,14 @@
 [ext_resource path="res://scenes/objects/Water.tscn" type="PackedScene" id=8]
 [ext_resource path="res://resources/images/textures/rock_texture2.jpg" type="Texture" id=9]
 [ext_resource path="res://resources/materials/texture_variation_background.tres" type="Material" id=10]
+[ext_resource path="res://resources/images/textures/light_texture.png" type="Texture" id=11]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.644144, 0.977477 )
+colors = PoolColorArray( 0.0487976, 0, 0.480469, 1, 0.385242, 0.201168, 0.527767, 1, 1, 0.539063, 0, 1 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
 
 [sub_resource type="Gradient" id=3]
 offsets = PoolRealArray( 0, 0.22905, 0.829609, 1 )
@@ -19,9 +27,22 @@ colors = PoolColorArray( 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 
 [node name="BackgroundShader" type="Sprite" parent="."]
 material = ExtResource( 5 )
-position = Vector2( 15359, -6766 )
-scale = Vector2( 178.852, 91.2735 )
+position = Vector2( -27722, 1307.12 )
+scale = Vector2( 178.852, 129.309 )
 texture = ExtResource( 4 )
+
+[node name="BackgroundShader2" type="Sprite" parent="."]
+position = Vector2( 1911.92, -8398.16 )
+rotation = 1.52925
+scale = Vector2( 7.37698, 23014.2 )
+texture = SubResource( 7 )
+
+[node name="BackgroundShader3" type="Sprite" parent="."]
+modulate = Color( 0.45098, 0.45098, 0.45098, 1 )
+position = Vector2( 1911.92, -8398.16 )
+rotation = 1.52925
+scale = Vector2( 7.37698, 23014.2 )
+texture = SubResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( -141, -1219 )
@@ -80,20 +101,47 @@ z_index = 20
 polygon = PoolVector2Array( -35, -479, 298, -402, 111, -201, 43, -238 )
 
 [node name="WallGrottoBody" parent="." instance=ExtResource( 7 )]
+modulate = Color( 0.282353, 0, 0.223529, 1 )
 position = Vector2( 1734, -1386 )
 z_index = 15
-polygon = PoolVector2Array( -19109, 29132, -21539, -9946, -8645, -10529, -4225, 330, -7679, 4851, -15137, 1903, -13978, 8864, -8543, 9372, -8848, 24306, -1633.04, 24970, -669, 21258, 1769, 21512, 2786.84, 25032.8, 19548, 25271, 20107, -10033, 24018, -10795, 22850, 29233 )
+polygon = PoolVector2Array( -19109, 29132, -21539, -9946, -9683, -13354, -4225, 330, -7679, 4851, -15137, 1903, -13978, 8864, -8543, 9372, -8848, 24306, -1633.04, 24970, -669, 21258, 1769, 21512, 2786.84, 25032.8, 19548, 25271, 20107, -10033, 24018, -10795, 22850, 29233 )
 
 [node name="WallGrottoTop" parent="." instance=ExtResource( 7 )]
-z_index = 15
-polygon = PoolVector2Array( 8664, 5294, 7371, 7054, 6437, -2716, 2881, -3183, -495, -6164, -352, -9469, 4497, -7385, 10783, -10905, 12830, -15288, 4749, -15539, -7428, -13563, -9179, -8192, -21446, -7735, -22083, -18556, 26372, -18987, 24253, -9002, 15893, -9522, 10963, -8930 )
+modulate = Color( 0.282353, 0, 0.223529, 1 )
+z_index = 16
+polygon = PoolVector2Array( 8664, 5294, 7371, 7054, 6437, -2716, 2881, -3183, -495, -6164, -352, -9469, 2626, -8035, 4979.48, -7655.18, 10783, -10905, 12830, -15288, 4749, -15539, -7428, -13563, -9179, -8192, -21446, -7735, -22083, -18556, 26372, -18987, 24253, -9002, 15893, -9522, 10963, -8930 )
 
 [node name="Water2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2174, -8409 )
 polygon = PoolVector2Array( 6566.06, -546, 5733.06, 1377, -654.94, 1150, -1835.94, -558 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+modulate = Color( 0.32549, 0.32549, 0.32549, 1 )
 material = ExtResource( 10 )
 texture = ExtResource( 9 )
 texture_scale = Vector2( 0.5, 0.5 )
-polygon = PoolVector2Array( -15299, -659, 8203, -792, 10392, -9945, 23193, -10299, 23215, 24612, -11165, 24744 )
+polygon = PoolVector2Array( -15299, -659, -4139, 283, -2650, -873, -2323, -1612, -1870, -1876, -1538, -2239, -1572, -2630, -1254, -3018, -768, -3530, -598, -4090, -202, -4496, -163, -4923, -131, -6623, -67, -9087, 6777, -9723, 8704, -10282, 8974, -11188, 10112, -11921, 11037, -11921, 11384, -11381, 23193, -10299, 23215, 24612, -11165, 24744 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 1333, -1186 )
+scale = Vector2( 2.5525, 2.5525 )
+texture = ExtResource( 11 )
+texture_scale = 2.0
+color = Color( 1, 0.796078, 0, 1 )
+energy = 5.0
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( 3703, 637 )
+scale = Vector2( 2.5525, 2.5525 )
+texture = ExtResource( 11 )
+texture_scale = 2.0
+color = Color( 0.890196, 0.890196, 0.890196, 1 )
+energy = 3.0
+
+[node name="Light2D3" type="Light2D" parent="."]
+position = Vector2( -73, 1606 )
+scale = Vector2( 2.5525, 2.5525 )
+texture = ExtResource( 11 )
+texture_scale = 2.0
+color = Color( 0.890196, 0.890196, 0.890196, 1 )
+energy = 3.0
