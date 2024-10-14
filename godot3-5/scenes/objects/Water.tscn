@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://resources/materials/Water.tres" type="Material" id=1]
+[ext_resource path="res://resources/images/shapes/straight_line.png" type="Texture" id=2]
+[ext_resource path="res://resources/images/textures/wall_texture_1.png" type="Texture" id=3]
+[ext_resource path="res://scripts/Water.gd" type="Script" id=4]
+
+[sub_resource type="Shader" id=2]
+code = "
+shader_type canvas_item;
+
+const float SPEED = 0.25;
+
+void fragment() {
+	vec2 moving_uv = vec2(UV.x-(TIME) * SPEED, UV.y);
+	vec4 in_tex = texture(TEXTURE, moving_uv);
+	COLOR = in_tex;
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.100586, 0.100586, 0.100586, 1, 0.19043, 0.19043, 0.19043, 1 )
+
+[node name="Water" type="Polygon2D"]
+material = ExtResource( 1 )
+position = Vector2( -1.05951, 0 )
+z_index = 15
+texture = ExtResource( 3 )
+polygon = PoolVector2Array( -57.6945, -111.281, 118.894, -102.872, 102.076, 85.489, -86.2849, 82.1254, -58.5534, -105.471 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 78.0 ]
+}
+
+[node name="Line2D" type="Line2D" parent="."]
+material = SubResource( 3 )
+position = Vector2( -2.94049, 0 )
+points = PoolVector2Array( -57.6945, -111.281, 118.894, -102.872, 102.076, 85.489, -86.2849, 82.1254, -58.5534, -105.471, -57.6945, -111.281 )
+width = 60.0
+default_color = Color( 1, 1, 1, 1 )
+gradient = SubResource( 1 )
+texture = ExtResource( 2 )
+texture_mode = 1
+joint_mode = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PoolVector2Array( -57.6945, -111.281, 118.894, -102.872, 102.076, 85.489, -86.2849, 82.1254, -58.5534, -105.471 )
+
+[node name="PolygonBG" type="Polygon2D" parent="."]
+visible = false
+z_index = -100
+color = Color( 0, 0.952941, 1, 1 )
+
+[connection signal="draw" from="." to="." method="_on_Water_draw"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

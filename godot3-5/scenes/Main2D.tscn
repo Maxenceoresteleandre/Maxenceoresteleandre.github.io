@@ -5,7 +5,7 @@
 [ext_resource path="res://resources/materials/star_sky_mat.tres" type="Material" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://resources/materials/swirly_background.tres" type="Material" id=5]
-[ext_resource path="res://resources/materials/water_material.tres" type="Material" id=6]
+[ext_resource path="res://resources/materials/Water.tres" type="Material" id=6]
 
 [sub_resource type="Gradient" id=3]
 offsets = PoolRealArray( 0, 0.22905, 0.829609, 1 )
