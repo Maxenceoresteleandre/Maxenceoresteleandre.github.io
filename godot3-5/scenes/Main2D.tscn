@@ -31,18 +31,25 @@ position = Vector2( -27722, 1307.12 )
 scale = Vector2( 178.852, 129.309 )
 texture = ExtResource( 4 )
 
-[node name="BackgroundShader2" type="Sprite" parent="."]
-position = Vector2( 1911.92, -8398.16 )
-rotation = 1.52925
-scale = Vector2( 7.37698, 23014.2 )
-texture = SubResource( 7 )
-
-[node name="BackgroundShader3" type="Sprite" parent="."]
+[node name="SkyBackground" type="Sprite" parent="."]
 modulate = Color( 0.45098, 0.45098, 0.45098, 1 )
 position = Vector2( 1911.92, -8398.16 )
 rotation = 1.52925
 scale = Vector2( 7.37698, 23014.2 )
 texture = SubResource( 7 )
+
+[node name="LightTexture" type="Sprite" parent="."]
+modulate = Color( 1, 0.960784, 0, 1 )
+position = Vector2( -2564, -959 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 11 )
+
+[node name="CaveBackground" type="Polygon2D" parent="."]
+modulate = Color( 0.32549, 0.32549, 0.32549, 1 )
+material = ExtResource( 10 )
+texture = ExtResource( 9 )
+texture_scale = Vector2( 0.5, 0.5 )
+polygon = PoolVector2Array( -15299, -659, -4139, 283, -2650, -873, -2437, -901, -2201, -1089, -2102, -1287, -1870, -1876, -1622, -2039, -1538, -2239, -1572, -2630, -1254, -3018, -768, -3530, -598, -4090, -202, -4496, -163, -4923, -131, -6623, -67, -9087, 6777, -9723, 8704, -10282, 8974, -11188, 10112, -11921, 11037, -11921, 11384, -11381, 23193, -10299, 23215, 24612, -11165, 24744 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( -141, -1219 )
@@ -51,10 +58,12 @@ position = Vector2( -141, -1219 )
 polygon = PoolVector2Array( -15603.9, -47, 8747.06, 71, 8678.06, -5481, 21730.1, -5446, 21326.1, 26726, -16339.9, 26673 )
 
 [node name="PlayerCamera" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1419, -542 )
 z_index = 100
 zoom = Vector2( 4, 4 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="PlayerCamera"]
+z_index = 100
 amount = 16
 lifetime = 4.0
 randomness = 0.5
@@ -68,7 +77,7 @@ initial_velocity = 100.0
 initial_velocity_random = 1.0
 scale_amount = 0.1
 scale_amount_random = 0.1
-color = Color( 0.160784, 0, 0.105882, 0.117647 )
+color = Color( 0.160784, 0, 0.105882, 0.156863 )
 color_ramp = SubResource( 3 )
 
 [node name="Wall" parent="." instance=ExtResource( 7 )]
@@ -105,7 +114,7 @@ polygon = PoolVector2Array( -35, -479, 298, -402, 111, -201, 43, -238 )
 modulate = Color( 0.282353, 0, 0.223529, 1 )
 position = Vector2( 1734, -1386 )
 z_index = 15
-polygon = PoolVector2Array( -19109, 29132, -21539, -9946, -9683, -13354, -4225, 330, -7679, 4851, -15137, 1903, -13978, 8864, -8543, 9372, -8848, 24306, -1633.04, 24970, -669, 21258, 1769, 21512, 2786.84, 25032.8, 19548, 25271, 20107, -10033, 24018, -10795, 22850, 29233 )
+polygon = PoolVector2Array( -19109, 29132, -21539, -9946, -9683, -13354, -5807, -1620, -5369, -850, -5381, -231, -4889, 474, -4422, 714, -4698, 1347, -4534, 2061, -4732, 2727, -7679, 4851, -15137, 1903, -13978, 8864, -8543, 9372, -8848, 24306, -1633.04, 24970, -669, 21258, 1769, 21512, 2786.84, 25032.8, 19548, 25271, 20107, -10033, 24018, -10795, 22850, 29233 )
 
 [node name="WallGrottoTop" parent="." instance=ExtResource( 7 )]
 modulate = Color( 0.282353, 0, 0.223529, 1 )
@@ -116,26 +125,17 @@ polygon = PoolVector2Array( 8664, 5294, 7371, 7054, 6437, -2716, 2881, -3183, -4
 position = Vector2( 2174, -8409 )
 polygon = PoolVector2Array( 6566.06, -546, 5733.06, 1377, -654.94, 1150, -1835.94, -558 )
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-modulate = Color( 0.32549, 0.32549, 0.32549, 1 )
-material = ExtResource( 10 )
-texture = ExtResource( 9 )
-texture_scale = Vector2( 0.5, 0.5 )
-polygon = PoolVector2Array( -15299, -659, -4139, 283, -2650, -873, -2323, -1612, -1870, -1876, -1538, -2239, -1572, -2630, -1254, -3018, -768, -3530, -598, -4090, -202, -4496, -163, -4923, -131, -6623, -67, -9087, 6777, -9723, 8704, -10282, 8974, -11188, 10112, -11921, 11037, -11921, 11384, -11381, 23193, -10299, 23215, 24612, -11165, 24744 )
-
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 1333, -1186 )
+position = Vector2( 1464, -168 )
 scale = Vector2( 2.5525, 2.5525 )
 texture = ExtResource( 11 )
-texture_scale = 2.0
 color = Color( 1, 0.796078, 0, 1 )
 energy = 5.0
 
 [node name="Light2D2" type="Light2D" parent="."]
-position = Vector2( 3703, 637 )
+position = Vector2( 4065, 999 )
 scale = Vector2( 2.5525, 2.5525 )
 texture = ExtResource( 11 )
-texture_scale = 2.0
 color = Color( 0.890196, 0.890196, 0.890196, 1 )
 energy = 3.0
 
@@ -143,6 +143,5 @@ energy = 3.0
 position = Vector2( -73, 1606 )
 scale = Vector2( 2.5525, 2.5525 )
 texture = ExtResource( 11 )
-texture_scale = 2.0
 color = Color( 0.890196, 0.890196, 0.890196, 1 )
 energy = 3.0
