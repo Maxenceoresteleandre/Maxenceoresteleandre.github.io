@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Wall.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/shapes/straight_line.png" type="Texture" id=2]
 [ext_resource path="res://resources/images/textures/rock_texture.jpg" type="Texture" id=3]
+[ext_resource path="res://resources/materials/texture_variation.tres" type="Material" id=4]
 
 [node name="Wall" type="Polygon2D"]
+material = ExtResource( 4 )
 texture = ExtResource( 3 )
 texture_scale = Vector2( 0.5, 0.5 )
 polygon = PoolVector2Array( -427, -12, -476, -385, -86, -404, 263, -123, 141, 288, -484, 261 )
