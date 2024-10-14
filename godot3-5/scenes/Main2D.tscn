@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/objects/player/PlayerCamera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/images/white-circle.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://scenes/objects/player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/objects/Wall.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/objects/Water.tscn" type="PackedScene" id=8]
+[ext_resource path="res://resources/images/textures/rock_texture2.jpg" type="Texture" id=9]
+[ext_resource path="res://resources/materials/texture_variation_background.tres" type="Material" id=10]
 
 [sub_resource type="Gradient" id=3]
 offsets = PoolRealArray( 0, 0.22905, 0.829609, 1 )
@@ -78,6 +80,7 @@ z_index = 20
 polygon = PoolVector2Array( -35, -479, 298, -402, 111, -201, 43, -238 )
 
 [node name="WallGrottoBody" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1734, -1386 )
 z_index = 15
 polygon = PoolVector2Array( -19109, 29132, -21539, -9946, -8645, -10529, -4225, 330, -7679, 4851, -15137, 1903, -13978, 8864, -8543, 9372, -8848, 24306, -1633.04, 24970, -669, 21258, 1769, 21512, 2786.84, 25032.8, 19548, 25271, 20107, -10033, 24018, -10795, 22850, 29233 )
 
@@ -88,3 +91,9 @@ polygon = PoolVector2Array( 8664, 5294, 7371, 7054, 6437, -2716, 2881, -3183, -4
 [node name="Water2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2174, -8409 )
 polygon = PoolVector2Array( 6566.06, -546, 5733.06, 1377, -654.94, 1150, -1835.94, -558 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = ExtResource( 10 )
+texture = ExtResource( 9 )
+texture_scale = Vector2( 0.5, 0.5 )
+polygon = PoolVector2Array( -15299, -659, 8203, -792, 10392, -9945, 23193, -10299, 23215, 24612, -11165, 24744 )
