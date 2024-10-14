@@ -51,6 +51,7 @@ position = Vector2( -141, -1219 )
 polygon = PoolVector2Array( -15603.9, -47, 8747.06, 71, 8678.06, -5481, 21730.1, -5446, 21326.1, 26726, -16339.9, 26673 )
 
 [node name="PlayerCamera" parent="." instance=ExtResource( 1 )]
+z_index = 100
 zoom = Vector2( 4, 4 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="PlayerCamera"]

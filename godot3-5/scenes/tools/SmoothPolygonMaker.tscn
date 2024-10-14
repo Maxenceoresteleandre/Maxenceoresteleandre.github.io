@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/tools/SmoothPolygonMaker.gd" type="Script" id=1]
+
+[sub_resource type="Curve2D" id=1]
+bake_interval = 50.0
+_data = {
+"points": PoolVector2Array( 30.4501, 304.987, -30.4501, -304.987, 261, 1874, 55.8887, 543.101, -55.8887, -543.101, 479, 1047, 114.099, -275.727, -114.099, 275.727, 1213, 972, -59.3299, -377.169, 59.3299, 377.169, 1513, 1546, 147.462, -235.463, -147.462, 235.463, 1039, 2048, 0, 0, 0, 0, 266, 1960, 0, 0, 0, 0, 261, 1874 )
+}
+
+[node name="SmoothPolygonMaker" type="Path2D"]
+curve = SubResource( 1 )
+script = ExtResource( 1 )
