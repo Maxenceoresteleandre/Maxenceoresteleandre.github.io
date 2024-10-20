@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function Dashboard({ navigation }) {
+export default () => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Dashboard</Text>

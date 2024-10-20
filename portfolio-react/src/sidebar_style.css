@@ -1,0 +1,189 @@
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 260px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1000; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #220011af; /* Black */
+    overflow: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    transform: rotate(-1deg);
+    padding-left: 50px;
+    margin-left: -45px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ababab;
+    display: block;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .jobs {
+    padding-left: 10%;
+    margin-bottom: -15px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    transition: color 0.5s ease;
+  }
+
+  .sidenav ul {
+    list-style: none;
+    margin: 0%;
+    margin-left: -5%;
+  }
+
+  .sidenav .jobs:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav ul li {
+    margin-left: -5%;
+    margin-top: -8px;
+    color:#ababab;
+  }
+
+  .sidenav ul li.active a {
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+    color:#fff;
+  }
+
+  .sidenav .work-list {
+    padding-left: 5%;
+    text-decoration: none;
+    font-size: 19px;    
+  }
+
+  .sidenav .work-list.active {
+    padding-left: 5%;
+    text-decoration: none;
+    font-size: 20px;
+    color:#fff;
+  }
+
+  .sidenav .work-list-element.active {
+    padding-left: 13%;
+    margin-top: -8px;
+    color:#fff;
+    font-size: 16px;
+  }
+
+  .sidenav .work-list-element {
+    padding-left: 13%;
+    margin-top: -8px;
+    font-size: 15px;
+  }
+
+  .sidenav .work-list:hover {
+    color: #f1f1f1;
+  }
+
+  .sidewaviy {
+	position: relative;
+	margin-left: 20px;
+	transition: 0.50s;
+  		-webkit-transition: 0.50s;
+  		-moz-transition: 0.50s;
+  		-ms-transition: 0.50s;
+  		-o-transition: 0.50s;
+  }
+  .sidewaviy span {
+	position: relative;
+	display: inline-block;
+	font-size: 30px;
+	color: #fff;
+	animation: flip 5s infinite;
+	animation-delay: calc(.2s * var(--i) - 4s)
+  }
+  @keyframes flip {
+	10%,30% {
+	  transform: /*rotateY(360deg)*/
+	  translateY(0)
+	}
+	20% {
+		transform: translateY(-20px)
+	  }
+  }
+  .sidewaviy:hover {
+	margin-left: 40px;
+  }
+  
+
+  /* Style page content */
+.main {
+    margin-left: 260px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  @media (max-width: 768px) {
+    .sidenav {
+        display: none;
+    }
+    .main {
+        margin-left: 0;
+    }
+}
+
+  .sidenav .logos {
+    display: flex; 
+    justify-content: space-between; 
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .sidenav .logo_child_img {
+    margin-left: -20px;
+    margin-right: -20px;
+    transform: rotate(0deg) scale(0.6);
+	transition: transform 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	text-decoration: none;
+	display: block;
+  } 
+
+  .sidenav .logo_child_img:hover {
+	background-color: transparent;
+	text-decoration: underline;
+	transition: 0.50s;
+  		-webkit-transition: 0.50s;
+  		-moz-transition: 0.50s;
+  		-ms-transition: 0.50s;
+  		-o-transition: 0.50s;
+  	transform: rotate(360deg) scale(0.85);
+		-webkit-transform: rotate(360deg) scale(0.85);
+		-moz-transform: rotate(360deg) scale(0.85);
+		-o-transform: rotate(360deg) scale(0.85);
+		-ms-transform: rotate(360deg) scale(0.85);
+    }
+
+  .sidenav .bottom_box {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Optional: You can control width */
+    padding-bottom: 40px;
+    border: 1px solid #000;
+  }
+
+  
+  
