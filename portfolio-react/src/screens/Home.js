@@ -2,23 +2,23 @@ import React from 'react';
 
 export default () => {
     return (
-    <React.View>
+<div>
 	<div class="sidenav">
 		<div class="sidewaviy">
-			<span style="--i:1">M</span>
-			<span style="--i:2">a</span>
-			<span style="--i:3">x</span>
-			<span style="--i:4">e</span>
-			<span style="--i:5">n</span>
-			<span style="--i:6">c</span>
-			<span style="--i:7">e</span>
+			<span style={{i:1}}>M</span>
+			<span style={{i:2}}>a</span>
+			<span style={{i:3}}>x</span>
+			<span style={{i:4}}>e</span>
+			<span style={{i:5}}>n</span>
+			<span style={{i:6}}>c</span>
+			<span style={{i:7}}>e</span>
 		</div>
 		<div class="sidewaviy">
-			<span style="--i:9;  font-size: 45px;margin-left: 40px;">M</span>
-			<span style="--i:10; font-size: 45px;">a</span>
-			<span style="--i:11; font-size: 45px;">i</span>
-			<span style="--i:12; font-size: 45px;">r</span>
-			<span style="--i:13; font-size: 45px;">e</span>
+			<span style={{i:9, fontSize: '45px', marginLeft: '40px'}}> M</span>
+			<span style={{i:10, fontSize: '45px'}}>a</span>
+			<span style={{i:11, fontSize: '45px'}}>i</span>
+			<span style={{i:12, fontSize: '45px'}}>r</span>
+			<span style={{i:13, fontSize: '45px'}}>e</span>
 		</div>
 		<h3 class="jobs" >Software Engineer</h3>
 		<h3 class="jobs" >Game Developer</h3>
@@ -65,35 +65,35 @@ export default () => {
 		<div style="height:50px"></div>
 		<div class="intro">
 			<div class="intro-child-im">
-				<img class="img-echoes" src="images/echoes-p1.png" title="That's Miner..." style="margin-top: 20px; margin-left: -20px; rotate: -30deg;" />
-				<img class="img-scrambled" src="images/scrambled-p2.png" title="That's a chicken without a gun" style="margin-top: 220px; margin-left: -50px; rotate: 240deg;" />
-				<img class="img-scrambled" src="images/scrambled-p3.png" title="That's a chicken with a gun" style="margin-top: 150px; margin-left: -100px; rotate: 270deg; transform: scaleX(-1);" />
-				<img class="img-olmo" src="images/olmo-1.png" title="That's Castano :D" style="margin-top: -90px; margin-left: -155px; rotate: -20deg;" />
-				<img class="img-pingu" src="images/pingu-p1.png" title="That's Pingu!!! By Cochon_Viking" style="margin-top: -47px; margin-left: -20px; rotate: 0deg;" />
-				<img class="img-pingu" src="images/pingu-p3.png" title="That's a yeti... By Cochon_Viking" style="margin-top: -90px; margin-left: 140px; rotate: 0deg;" />
+				<img class="img-echoes" src="images/echoes-p1.png" title="That's Miner..." style={{marginTop: '20px', marginLeft: '-20px', rotate: '-30deg'}}/>
+				<img class="img-scrambled" src="images/scrambled-p2.png" title="That's a chicken without a gun" style={{marginTop: '220px', marginLeft: '-50px', rotate: '240deg'}}/>
+				<img class="img-scrambled" src="images/scrambled-p3.png" title="That's a chicken with a gun" style={{marginTop: '150px', marginLeft: '-100px', rotate: '270deg', transform: scale(-1, 1)}}/>
+				<img class="img-olmo" src="images/olmo-1.png" title="That's Castano :D" style={{marginTop: '-90px', marginLeft: '-155px', rotate: '-20deg'}}/>
+				<img class="img-pingu" src="images/pingu-p1.png" title="That's Pingu!!! By Cochon_Viking" style={{marginTop: '-47px', marginLeft: '-20px', rotate: '0deg'}}/>
+				<img class="img-pingu" src="images/pingu-p3.png" title="That's a yeti... By Cochon_Viking" style={{marginTop: '-90px', marginLeft: '140px', rotate: '0deg'}}/>
 
-				<img class="img-echoes" src="images/echoes-p4.png" title="That's the Boss..." style="margin-top: 235px; margin-left: 205px; rotate: 40deg;" />
-				<img class="img-echoes" src="images/echoes-p5.png" title="That's an evil echo >:(" style="margin-top: 145px; margin-left: 195px; rotate: 5deg;" />
-				<img class="img-echoes" src="images/echoes-p5.png" title="That's another evil echo >:(" style="margin-top: 185px; margin-left: 205px; rotate: 10deg;" />
-				<img class="img-echoes" src="images/echoes-p8.png" title="That's your echo :o" style="margin-top: 15px; margin-left: 190px; rotate: 10deg; transform: scaleX(-1);" />
-				<img class="img-echoes" src="images/echoes-p3.png" title="That's you!" style="margin-top: 65px; margin-left: 195px; rotate: 20deg; transform: scaleX(-1);" />
+				<img class="img-echoes" src="images/echoes-p4.png" title="That's the Boss..." style={{marginTop: '235px', marginLeft: '205px', rotate: '40deg'}}/>
+				<img class="img-echoes" src="images/echoes-p5.png" title="That's an evil echo >:(" style={{marginTop: '145px', marginLeft: '195px', rotate: '5deg'}}/>
+				<img class="img-echoes" src="images/echoes-p5.png" title="That's another evil echo >:(" style={{marginTop: '185px', marginLeft: '205px', rotate: '10deg'}}/>
+				<img class="img-echoes" src="images/echoes-p8.png" title="That's your echo :o" style={{marginTop: '15px', marginLeft: '190px', rotate: '10deg', transform: scale(-1, 1)}}/>
+				<img class="img-echoes" src="images/echoes-p3.png" title="That's you!" style={{marginTop: '65px', marginLeft: '195px', rotate: '20deg', transform: scale(-1, 1)}} />
 				<img class="profile-picture" src="images/profile-picture.jpg" title="That's me!" />
 			</div>
 			<div class="intro-child-text">
 				<div class="waviy">
-					<span style="--i:1">M</span>
-					<span style="--i:2">a</span>
-					<span style="--i:3">x</span>
-					<span style="--i:4">e</span>
-					<span style="--i:5">n</span>
-					<span style="--i:6">c</span>
-					<span style="--i:7">e</span>
-					<span style="--i:8">&nbsp&nbsp</span>
-					<span style="--i:8">M</span>
-					<span style="--i:9">a</span>
-					<span style="--i:10">i</span>
-					<span style="--i:11">r</span>
-					<span style="--i:12">e</span>
+					<span style={{i:1}}>M</span>
+					<span style={{i:2}}>a</span>
+					<span style={{i:3}}>x</span>
+					<span style={{i:4}}>e</span>
+					<span style={{i:5}}>n</span>
+					<span style={{i:6}}>c</span>
+					<span style={{i:7}}>e</span>
+					<span style={{i:8}}>&nbsp&nbsp</span>
+					<span style={{i:8}}>M</span>
+					<span style={{i:9}}>a</span>
+					<span style={{i:10}}>i</span>
+					<span style={{i:11}}>r</span>
+					<span style={{i:12}}>e</span>
 				</div>
 
 				   <hr class="h-line2"/>
@@ -123,8 +123,8 @@ export default () => {
 		</div>
 
 	<section id="video_game_work">
-		<h2 class="z-text" style="margin-top: 60px;">Video Game Work:
-			<img class="img-olmo" src="images/olmo-4.png" title="IS THAT A PIRATE CHICK???" style="margin-top: -170px; margin-left: -425px; rotate: 5deg; transform: scaleX(-1);" />
+		<h2 class="z-text" style={{marginTop: '60px'}}>Video Game Work:
+			<img class="img-olmo" src="images/olmo-4.png" title="IS THAT A PIRATE CHICK???" style={{marginTop: '-170px', marginLeft: '-425px', rotate: '5deg', transform: scale(-1, 1)}}/>
 		</h2>
 		
 
@@ -134,7 +134,7 @@ export default () => {
 					<button class="collapsible">
 						<img class="project-img" src="images/allianzVR.jpg" />
 						<h3>Allianz FreeRoaming
-							<p style="font-size: small;">
+							<p style={{fontSize: small}}>
 								FreeRoaming Multiplayer VR Game, developed with Unreal Engine 5 for the 2024 Paris Olympic Games
 							</p>
 						</h3>
@@ -149,7 +149,7 @@ export default () => {
 				<div class="work-item">
 					<button class="collapsible" href="https://maxenceoresteleandre.github.io/allianz_vr.html">
 						<div class="work-content">
-							<p style="font: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque accusantium, provident rerum eligendi doloribus, quasi quam blanditiis illum ex ipsum deleniti laborum recusandae impedit eius id aut hic quidem!</p>
+							<p style={{font: '50px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque accusantium, provident rerum eligendi doloribus, quasi quam blanditiis illum ex ipsum deleniti laborum recusandae impedit eius id aut hic quidem!</p>
 						</div>
 						<h3>XYZ Godot Utility Plugin Suite</h3>
 						<img class="project-img" src="images/allianzVR.jpg" />
@@ -184,9 +184,9 @@ export default () => {
 	</section>
 		
 		<section id="others">
-		<div class="z-text" style="margin-bottom: 60px;">
-			<h3 style="margin-top: 60px;">Personal experiences
-				<img class="img-pingu" src="images/pingu-p2.png" title="That's an alien pig. By Cochon_Viking" style="margin-top: -55px; margin-left: 20%; rotate: 0deg; z-index: 2;"/>
+		<div class="z-text" style={{marginBottom: '60px'}}>
+			<h3 style={{marginTop: '60px'}}>Personal experiences
+				<img class="img-pingu" src="images/pingu-p2.png" title="That's an alien pig. By Cochon_Viking"  style={{marginTop: '-55px', marginLeft: '20%', rotate: '0deg', zIndex:2}}/>
 			</h3>
 			<p>
 				For years, I have been deeply passionate about game design, programming, and literature, and I have gained extensive experience in software and game development. 
@@ -198,7 +198,7 @@ export default () => {
 			</p>
 			<p>
 				In my spare time, I enjoy cooking, practicing fencing, and spending time with my cat. I like my cat. She's very cute. I will show you a picture of her if you ask. And probably also if you don't ask.
-				<img class="img-echoes" src="images/echoes-p6.png" title="That's the Shark!" style="margin-top: 50px; margin-left: -57%; rotate: -5deg; transform: scaleX(-1);"/>
+				<img class="img-echoes" src="images/echoes-p6.png" title="That's the Shark!"  style={{marginTop: '50px', marginLeft: '-57%', rotate: '-5deg', transform: scale(-1, 1)}}/>
 			</p>
 		</div>
 		</section>
@@ -206,7 +206,7 @@ export default () => {
 		<hr class="h-line"/>
 
 		<h2 class="z-text">Latest game projects:
-			<img class="img-echoes" src="images/echoes-p7.png" title="That's a security guard" style="margin-top: 10px; margin-left: -350px; rotate: -15deg; transform: scaleX(-1);"/>
+			<img class="img-echoes" src="images/echoes-p7.png" title="That's a security guard" style={{marginTop: '10px', marginLeft: '-350px', rotate: '-15deg', transform: scale(-1, 1)}}/>
 		</h2>
 
 		<iframe src="https://itch.io/embed/1824207?bg_color=004140&amp;fg_color=ffffff&amp;link_color=9783f2&amp;border_color=354d51" 
@@ -240,10 +240,10 @@ export default () => {
 		</iframe>
 
 		<hr class="h-line"/>
-		<div style="height:20px">
-			<img class="img-olmo" src="images/olmo-6.png" title="That's the mayor..." style="margin-top: -185px; margin-left: -110px; rotate: 0deg; transform: scale(2.0);"/>
-			<img class="img-olmo" src="images/olmo-cerez.png" title="You found Olmo! :))" style="margin-top: -290px; margin-left: 60px; rotate: 0deg;"/>
-			<img class="img-olmo" src="images/olmo-building.png" title="That's just Castano's place." style="margin-top: -463px; margin-left: 62%; rotate: 0deg; transform: scale(2.5);"/>
+		<div style={{height:'20px'}}> 
+			<img class="img-olmo" src="images/olmo-6.png" title="That's the mayor..." style={{marginTop: '-110px', marginLeft: '62%', rotate: '0deg', transform: scale(2.0)}}/>
+			<img class="img-olmo" src="images/olmo-cerez.png" title="You found Olmo! :))" style={{marginTop:'-290px', marginLeft: '60px', rotate: '0deg', transform: scale(2.5)}}/>
+			<img class="img-olmo" src="images/olmo-building.png" title="That's just Castano's place." style={{marginTop: '-463px', marginLeft: '62%', rotate: '0deg', transform: scale(2.5)}}/>
 		</div>
 
 		<div class="bubbles">
@@ -262,7 +262,8 @@ export default () => {
 		
 	</div>
 	</div>
+	
+</div>
 
-    </React.View>
     );
 }
