@@ -5,20 +5,20 @@ export default () => {
 <div>
 	<div class="sidenav">
 		<div class="sidewaviy">
-			<span style={{i:1}}>M</span>
-			<span style={{i:2}}>a</span>
-			<span style={{i:3}}>x</span>
-			<span style={{i:4}}>e</span>
-			<span style={{i:5}}>n</span>
-			<span style={{i:6}}>c</span>
-			<span style={{i:7}}>e</span>
+			<span style={{'--i':1}}>M</span>
+			<span style={{'--i':2}}>a</span>
+			<span style={{'--i':3}}>x</span>
+			<span style={{'--i':4}}>e</span>
+			<span style={{'--i':5}}>n</span>
+			<span style={{'--i':6}}>c</span>
+			<span style={{'--i':7}}>e</span>
 		</div>
 		<div class="sidewaviy">
-			<span style={{i:9, fontSize: '45px', marginLeft: '40px'}}> M</span>
-			<span style={{i:10, fontSize: '45px'}}>a</span>
-			<span style={{i:11, fontSize: '45px'}}>i</span>
-			<span style={{i:12, fontSize: '45px'}}>r</span>
-			<span style={{i:13, fontSize: '45px'}}>e</span>
+			<span style={{'--i':9, fontSize: '45px', marginLeft: '40px'}}> M</span>
+			<span style={{'--i':10, fontSize: '45px'}}>a</span>
+			<span style={{'--i':11, fontSize: '45px'}}>i</span>
+			<span style={{'--i':12, fontSize: '45px'}}>r</span>
+			<span style={{'--i':13, fontSize: '45px'}}>e</span>
 		</div>
 		<h3 class="jobs" >Software Engineer</h3>
 		<h3 class="jobs" >Game Developer</h3>
@@ -81,19 +81,19 @@ export default () => {
 			</div>
 			<div class="intro-child-text">
 				<div class="waviy">
-					<span style={{i:1}}>M</span>
-					<span style={{i:2}}>a</span>
-					<span style={{i:3}}>x</span>
-					<span style={{i:4}}>e</span>
-					<span style={{i:5}}>n</span>
-					<span style={{i:6}}>c</span>
-					<span style={{i:7}}>e</span>
-					<span style={{i:8}}>&nbsp&nbsp</span>
-					<span style={{i:8}}>M</span>
-					<span style={{i:9}}>a</span>
-					<span style={{i:10}}>i</span>
-					<span style={{i:11}}>r</span>
-					<span style={{i:12}}>e</span>
+					<span style={{'--i':1}}>M</span>
+					<span style={{'--i':2}}>a</span>
+					<span style={{'--i':3}}>x</span>
+					<span style={{'--i':4}}>e</span>
+					<span style={{'--i':5}}>n</span>
+					<span style={{'--i':6}}>c</span>
+					<span style={{'--i':7}}>e</span>
+					<span style={{'--i':8}}>&nbsp&nbsp</span>
+					<span style={{'--i':8}}>M</span>
+					<span style={{'--i':9}}>a</span>
+					<span style={{'--i':10}}>i</span>
+					<span style={{'--i':11}}>r</span>
+					<span style={{'--i':12}}>e</span>
 				</div>
 
 				   <hr class="h-line2"/>
