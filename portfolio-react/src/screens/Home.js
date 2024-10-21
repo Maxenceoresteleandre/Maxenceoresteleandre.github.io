@@ -134,7 +134,7 @@ export default () => {
 					<button class="collapsible">
 						<img class="project-img" src="images/allianzVR.jpg" />
 						<h3>Allianz FreeRoaming
-							<p style={{fontSize: small}}>
+							<p style={{fontSize:'14px'}}>
 								FreeRoaming Multiplayer VR Game, developed with Unreal Engine 5 for the 2024 Paris Olympic Games
 							</p>
 						</h3>
