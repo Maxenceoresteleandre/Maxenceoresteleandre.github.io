@@ -67,7 +67,7 @@ export default () => {
 			<div class="intro-child-im">
 				<img class="img-echoes" src="images/echoes-p1.png" title="That's Miner..." style={{marginTop: '20px', marginLeft: '-20px', rotate: '-30deg'}}/>
 				<img class="img-scrambled" src="images/scrambled-p2.png" title="That's a chicken without a gun" style={{marginTop: '220px', marginLeft: '-50px', rotate: '240deg'}}/>
-				<img class="img-scrambled" src="images/scrambled-p3.png" title="That's a chicken with a gun" style={{marginTop: '150px', marginLeft: '-100px', rotate: '270deg', transform: scale(-1, 1)}}/>
+				<img class="img-scrambled" src="images/scrambled-p3.png" title="That's a chicken with a gun" style={{marginTop: '150px', marginLeft: '-100px', rotate: '270deg', scale:(-1, 1)}}/>
 				<img class="img-olmo" src="images/olmo-1.png" title="That's Castano :D" style={{marginTop: '-90px', marginLeft: '-155px', rotate: '-20deg'}}/>
 				<img class="img-pingu" src="images/pingu-p1.png" title="That's Pingu!!! By Cochon_Viking" style={{marginTop: '-47px', marginLeft: '-20px', rotate: '0deg'}}/>
 				<img class="img-pingu" src="images/pingu-p3.png" title="That's a yeti... By Cochon_Viking" style={{marginTop: '-90px', marginLeft: '140px', rotate: '0deg'}}/>
@@ -75,8 +75,8 @@ export default () => {
 				<img class="img-echoes" src="images/echoes-p4.png" title="That's the Boss..." style={{marginTop: '235px', marginLeft: '205px', rotate: '40deg'}}/>
 				<img class="img-echoes" src="images/echoes-p5.png" title="That's an evil echo >:(" style={{marginTop: '145px', marginLeft: '195px', rotate: '5deg'}}/>
 				<img class="img-echoes" src="images/echoes-p5.png" title="That's another evil echo >:(" style={{marginTop: '185px', marginLeft: '205px', rotate: '10deg'}}/>
-				<img class="img-echoes" src="images/echoes-p8.png" title="That's your echo :o" style={{marginTop: '15px', marginLeft: '190px', rotate: '10deg', transform: scale(-1, 1)}}/>
-				<img class="img-echoes" src="images/echoes-p3.png" title="That's you!" style={{marginTop: '65px', marginLeft: '195px', rotate: '20deg', transform: scale(-1, 1)}} />
+				<img class="img-echoes" src="images/echoes-p8.png" title="That's your echo :o" style={{marginTop: '15px', marginLeft: '190px', rotate: '10deg', scale:(-1, 1)}}/>
+				<img class="img-echoes" src="images/echoes-p3.png" title="That's you!" style={{marginTop: '65px', marginLeft: '195px', rotate: '20deg', scale:(-1, 1)}} />
 				<img class="profile-picture" src="images/profile-picture.jpg" title="That's me!" />
 			</div>
 			<div class="intro-child-text">
@@ -124,7 +124,7 @@ export default () => {
 
 	<section id="video_game_work">
 		<h2 class="z-text" style={{marginTop: '60px'}}>Video Game Work:
-			<img class="img-olmo" src="images/olmo-4.png" title="IS THAT A PIRATE CHICK???" style={{marginTop: '-170px', marginLeft: '-425px', rotate: '5deg', transform: scale(-1, 1)}}/>
+			<img class="img-olmo" src="images/olmo-4.png" title="IS THAT A PIRATE CHICK???" style={{marginTop: '-170px', marginLeft: '-425px', rotate: '5deg', scale:(-1, 1)}}/>
 		</h2>
 		
 
@@ -198,7 +198,7 @@ export default () => {
 			</p>
 			<p>
 				In my spare time, I enjoy cooking, practicing fencing, and spending time with my cat. I like my cat. She's very cute. I will show you a picture of her if you ask. And probably also if you don't ask.
-				<img class="img-echoes" src="images/echoes-p6.png" title="That's the Shark!"  style={{marginTop: '50px', marginLeft: '-57%', rotate: '-5deg', transform: scale(-1, 1)}}/>
+				<img class="img-echoes" src="images/echoes-p6.png" title="That's the Shark!"  style={{marginTop: '50px', marginLeft: '-57%', rotate: '-5deg', scale:(-1, 1)}}/>
 			</p>
 		</div>
 		</section>
@@ -206,7 +206,7 @@ export default () => {
 		<hr class="h-line"/>
 
 		<h2 class="z-text">Latest game projects:
-			<img class="img-echoes" src="images/echoes-p7.png" title="That's a security guard" style={{marginTop: '10px', marginLeft: '-350px', rotate: '-15deg', transform: scale(-1, 1)}}/>
+			<img class="img-echoes" src="images/echoes-p7.png" title="That's a security guard" style={{marginTop: '10px', marginLeft: '-350px', rotate: '-15deg', scale:(-1, 1)}}/>
 		</h2>
 
 		<iframe src="https://itch.io/embed/1824207?bg_color=004140&amp;fg_color=ffffff&amp;link_color=9783f2&amp;border_color=354d51" 
@@ -241,9 +241,9 @@ export default () => {
 
 		<hr class="h-line"/>
 		<div style={{height:'20px'}}> 
-			<img class="img-olmo" src="images/olmo-6.png" title="That's the mayor..." style={{marginTop: '-110px', marginLeft: '62%', rotate: '0deg', transform: scale(2.0)}}/>
-			<img class="img-olmo" src="images/olmo-cerez.png" title="You found Olmo! :))" style={{marginTop:'-290px', marginLeft: '60px', rotate: '0deg', transform: scale(2.5)}}/>
-			<img class="img-olmo" src="images/olmo-building.png" title="That's just Castano's place." style={{marginTop: '-463px', marginLeft: '62%', rotate: '0deg', transform: scale(2.5)}}/>
+			<img class="img-olmo" src="images/olmo-6.png" title="That's the mayor..." style={{marginTop: '-110px', marginLeft: '62%', rotate: '0deg', scale:2}}/>
+			<img class="img-olmo" src="images/olmo-cerez.png" title="You found Olmo! :))" style={{marginTop:'-290px', marginLeft: '60px', rotate: '0deg', scale:2.5}}/>
+			<img class="img-olmo" src="images/olmo-building.png" title="That's just Castano's place." style={{marginTop: '-463px', marginLeft: '62%', rotate: '0deg', scale:2.5}}/>
 		</div>
 
 		<div class="bubbles">
