@@ -22,9 +22,9 @@ export default () => {
 		</div>
 		<h3 class="jobs" >Software Engineer</h3>
 		<h3 class="jobs" >Game Developer</h3>
-		<h3 class="jobs" style="margin-bottom: 10px;" >Computer Scientist</h3>
+		<h3 class="jobs" style={{marginBottom:'10px'}}> Computer Scientist</h3>
 
-        <hr class="h-line" style="margin-top: 12px; margin-bottom: 0px; height: 3px;" />
+        <hr class="h-line" style={{marginTop: '12px', marginBottom: '0px', height: '3px'}} />
 
 		<menu>
 		<a class="work-list" href="#video_game_work">Video Game Work</a> 
@@ -44,7 +44,7 @@ export default () => {
 		<a class="work-list-element" href="#others">This website!</a> 
 		</menu>
 
-        <hr class="h-line" style="margin-top: 10px; margin-bottom: 0px; height: 3px;" />
+        <hr class="h-line" style={{marginTop: '10px', marginBottom: '0px', height: '3px'}} />
 
         <div class="logos">
             <a class="logo_child_img" href="https://github.com/Maxenceoresteleandre" target="_blank" rel="noopener noreferrer">
@@ -62,7 +62,7 @@ export default () => {
 	
 	<div class="main">
 	<div class="container">
-		<div style="height:50px"></div>
+		<div style={{height:'50px'}}></div>
 		<div class="intro">
 			<div class="intro-child-im">
 				<img class="img-echoes" src="images/echoes-p1.png" title="That's Miner..." style={{marginTop: '20px', marginLeft: '-20px', rotate: '-30deg'}}/>
