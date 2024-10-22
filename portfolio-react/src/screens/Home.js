@@ -1,4 +1,8 @@
 import React from 'react';
+import './style.css';
+import './bubbles_background.css';
+import './hover_effects.css';
+import './sidebar_style.css';
 
 export default () => {
     return (
