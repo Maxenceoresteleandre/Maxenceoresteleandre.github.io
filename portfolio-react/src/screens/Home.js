@@ -52,13 +52,13 @@ export default () => {
 
         <div class="logos">
             <a class="logo_child_img" href="https://github.com/Maxenceoresteleandre" target="_blank" rel="noopener noreferrer">
-                <img src="images/logo_github.png" />
+                <img src={require("./images/logo_github.png")} />
             </a>
             <a class="logo_child_img" href="https://maxence-maire.itch.io/" target="_blank" rel="noopener noreferrer">
-                <img src="images/logo_itch.png" />
+                <img src={require("./images/logo_itch.png")} />
             </a>
             <a class="logo_child_img" href="https://www.linkedin.com/in/maxence-maire-048930241/" target="_blank" rel="noopener noreferrer">
-                <img src="images/logo_linkedin.png" />
+                <img src={require("./images/logo_linkedin.png")} />
             </a>
         </div>
 	</div> 
@@ -69,19 +69,19 @@ export default () => {
 		<div style={{height:'50px'}}></div>
 		<div class="intro">
 			<div class="intro-child-im">
-				<img class="img-echoes" src="images/echoes-p1.png" title="That's Miner..." style={{marginTop: '20px', marginLeft: '-20px', rotate: '-30deg'}}/>
-				<img class="img-scrambled" src="images/scrambled-p2.png" title="That's a chicken without a gun" style={{marginTop: '220px', marginLeft: '-50px', rotate: '240deg'}}/>
-				<img class="img-scrambled" src="images/scrambled-p3.png" title="That's a chicken with a gun" style={{marginTop: '150px', marginLeft: '-100px', rotate: '270deg', scale:(-1, 1)}}/>
-				<img class="img-olmo" src="images/olmo-1.png" title="That's Castano :D" style={{marginTop: '-90px', marginLeft: '-155px', rotate: '-20deg'}}/>
-				<img class="img-pingu" src="images/pingu-p1.png" title="That's Pingu!!! By Cochon_Viking" style={{marginTop: '-47px', marginLeft: '-20px', rotate: '0deg'}}/>
-				<img class="img-pingu" src="images/pingu-p3.png" title="That's a yeti... By Cochon_Viking" style={{marginTop: '-90px', marginLeft: '140px', rotate: '0deg'}}/>
+				<img class="img-echoes" src={require("./images/echoes-p1.png")} title="That's Miner..." style={{marginTop: '20px', marginLeft: '-20px', rotate: '-30deg'}}/>
+				<img class="img-scrambled" src={require("./images/scrambled-p2.png")} title="That's a chicken without a gun" style={{marginTop: '220px', marginLeft: '-50px', rotate: '240deg'}}/>
+				<img class="img-scrambled" src={require("./images/scrambled-p3.png")} title="That's a chicken with a gun" style={{marginTop: '150px', marginLeft: '-100px', rotate: '270deg', scale:(-1, 1)}}/>
+				<img class="img-olmo" src={require("./images/olmo-1.png")} title="That's Castano :D" style={{marginTop: '-90px', marginLeft: '-155px', rotate: '-20deg'}}/>
+				<img class="img-pingu" src={require("./images/pingu-p1.png")} title="That's Pingu!!! By Cochon_Viking" style={{marginTop: '-47px', marginLeft: '-20px', rotate: '0deg'}}/>
+				<img class="img-pingu" src={require("./images/pingu-p3.png")} title="That's a yeti... By Cochon_Viking" style={{marginTop: '-90px', marginLeft: '140px', rotate: '0deg'}}/>
 
-				<img class="img-echoes" src="images/echoes-p4.png" title="That's the Boss..." style={{marginTop: '235px', marginLeft: '205px', rotate: '40deg'}}/>
-				<img class="img-echoes" src="images/echoes-p5.png" title="That's an evil echo >:(" style={{marginTop: '145px', marginLeft: '195px', rotate: '5deg'}}/>
-				<img class="img-echoes" src="images/echoes-p5.png" title="That's another evil echo >:(" style={{marginTop: '185px', marginLeft: '205px', rotate: '10deg'}}/>
-				<img class="img-echoes" src="images/echoes-p8.png" title="That's your echo :o" style={{marginTop: '15px', marginLeft: '190px', rotate: '10deg', scale:(-1, 1)}}/>
-				<img class="img-echoes" src="images/echoes-p3.png" title="That's you!" style={{marginTop: '65px', marginLeft: '195px', rotate: '20deg', scale:(-1, 1)}} />
-				<img class="profile-picture" src="images/profile-picture.jpg" title="That's me!" />
+				<img class="img-echoes" src={require("./images/echoes-p4.png")} title="That's the Boss..." style={{marginTop: '235px', marginLeft: '205px', rotate: '40deg'}}/>
+				<img class="img-echoes" src={require("./images/echoes-p5.png")} title="That's an evil echo >:(" style={{marginTop: '145px', marginLeft: '195px', rotate: '5deg'}}/>
+				<img class="img-echoes" src={require("./images/echoes-p5.png")} title="That's another evil echo >:(" style={{marginTop: '185px', marginLeft: '205px', rotate: '10deg'}}/>
+				<img class="img-echoes" src={require("./images/echoes-p8.png")} title="That's your echo :o" style={{marginTop: '15px', marginLeft: '190px', rotate: '10deg', scale:(-1, 1)}}/>
+				<img class="img-echoes" src={require("./images/echoes-p3.png")} title="That's you!" style={{marginTop: '65px', marginLeft: '195px', rotate: '20deg', scale:(-1, 1)}} />
+				<img class="profile-picture" src={require("./images/profile-picture.jpg")} title="That's me!" />
 			</div>
 			<div class="intro-child-text">
 				<div class="waviy">
@@ -128,7 +128,7 @@ export default () => {
 
 	<section id="video_game_work">
 		<h2 class="z-text" style={{marginTop: '60px'}}>Video Game Work:
-			<img class="img-olmo" src="images/olmo-4.png" title="IS THAT A PIRATE CHICK???" style={{marginTop: '-170px', marginLeft: '-425px', rotate: '5deg', scale:(-1, 1)}}/>
+			<img class="img-olmo" src={require("./images/olmo-4.png")} title="IS THAT A PIRATE CHICK???" style={{marginTop: '-170px', marginLeft: '-425px', rotate: '5deg', scale:(-1, 1)}}/>
 		</h2>
 		
 
@@ -136,7 +136,7 @@ export default () => {
 			<div class="z-work-item">
 				<div class="work-item">
 					<button class="collapsible">
-						<img class="project-img" src="images/allianzVR.jpg" />
+						<img class="project-img" src={require("./images/allianzVR.jpg")} />
 						<h3>Allianz FreeRoaming
 							<p style={{fontSize:'14px'}}>
 								FreeRoaming Multiplayer VR Game, developed with Unreal Engine 5 for the 2024 Paris Olympic Games
@@ -156,7 +156,7 @@ export default () => {
 							<p style={{font: '50px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque accusantium, provident rerum eligendi doloribus, quasi quam blanditiis illum ex ipsum deleniti laborum recusandae impedit eius id aut hic quidem!</p>
 						</div>
 						<h3>XYZ Godot Utility Plugin Suite</h3>
-						<img class="project-img" src="images/allianzVR.jpg" />
+						<img class="project-img" src={require("./images/allianzVR.jpg")} />
 					</button>
 				</div>
 			</div>
@@ -166,7 +166,7 @@ export default () => {
 			<div class="z-work-item">
 				<div class="work-item">
 					<button class="collapsible" href="https://maxenceoresteleandre.github.io/allianz_vr.html">
-						<img class="project-img" src="images/allianzVR.jpg" />
+						<img class="project-img" src={require("./images/allianzVR.jpg")} />
 						<h3>Play Sorbonne U Projects</h3>
 					</button>
 				</div>
@@ -178,7 +178,7 @@ export default () => {
 				<div class="work-item">
 					<button class="collapsible" href="https://maxenceoresteleandre.github.io/allianz_vr.html">
 						<h3>FeuilleMorte Video Games</h3>
-						<img class="project-img" src="images/allianzVR.jpg" />
+						<img class="project-img" src={require("./images/allianzVR.jpg")} />
 					</button>
 				</div>
 			</div>
@@ -190,7 +190,7 @@ export default () => {
 		<section id="others">
 		<div class="z-text" style={{marginBottom: '60px'}}>
 			<h3 style={{marginTop: '60px'}}>Personal experiences
-				<img class="img-pingu" src="images/pingu-p2.png" title="That's an alien pig. By Cochon_Viking"  style={{marginTop: '-55px', marginLeft: '20%', rotate: '0deg', zIndex:2}}/>
+				<img class="img-pingu" src={require("./images/pingu-p2.png")} title="That's an alien pig. By Cochon_Viking"  style={{marginTop: '-55px', marginLeft: '20%', rotate: '0deg', zIndex:2}}/>
 			</h3>
 			<p>
 				For years, I have been deeply passionate about game design, programming, and literature, and I have gained extensive experience in software and game development. 
@@ -202,7 +202,7 @@ export default () => {
 			</p>
 			<p>
 				In my spare time, I enjoy cooking, practicing fencing, and spending time with my cat. I like my cat. She's very cute. I will show you a picture of her if you ask. And probably also if you don't ask.
-				<img class="img-echoes" src="images/echoes-p6.png" title="That's the Shark!"  style={{marginTop: '50px', marginLeft: '-57%', rotate: '-5deg', scale:(-1, 1)}}/>
+				<img class="img-echoes" src={require("./images/echoes-p6.png")} title="That's the Shark!"  style={{marginTop: '50px', marginLeft: '-57%', rotate: '-5deg', scale:(-1, 1)}}/>
 			</p>
 		</div>
 		</section>
@@ -210,44 +210,44 @@ export default () => {
 		<hr class="h-line"/>
 
 		<h2 class="z-text">Latest game projects:
-			<img class="img-echoes" src="images/echoes-p7.png" title="That's a security guard" style={{marginTop: '10px', marginLeft: '-350px', rotate: '-15deg', scale:(-1, 1)}}/>
+			<img class="img-echoes" src={require("./images/echoes-p7.png")} title="That's a security guard" style={{marginTop: '10px', marginLeft: '-350px', rotate: '-15deg', scale:(-1, 1)}}/>
 		</h2>
 
-		<iframe src="https://itch.io/embed/1824207?bg_color=004140&amp;fg_color=ffffff&amp;link_color=9783f2&amp;border_color=354d51" 
+		<iframe src={"https://itch.io/embed/1824207?bg_color=004140&amp;fg_color=ffffff&amp;link_color=9783f2&amp;border_color=354d51"} 
 			width="552" height="167" frameborder="0">
 			<a href="https://feuillemorteentertainment.itch.io/echoes-complete-edition">ECHOES - Complete edition by FeuilleMorte Entertainment</a>
 		</iframe>
 
-		<iframe src="https://itch.io/embed/1579605?bg_color=221423&amp;fg_color=fff5eb&amp;link_color=ee4040&amp;border_color=682d73" 
+		<iframe src={"https://itch.io/embed/1579605?bg_color=221423&amp;fg_color=fff5eb&amp;link_color=ee4040&amp;border_color=682d73"}
 			width="552" height="167" frameborder="0">
 			<a href="https://feuillemorteentertainment.itch.io/flymetothesun">Fly me to the Sun by FeuilleMorte Entertainment, Talamh, Cochon_Viking, Pioure, Maureen Bst</a>
 		</iframe>
 
-		<iframe src="https://itch.io/embed/2203248?linkback=true&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=c9c9c9&amp;border_color=333ad6" 
+		<iframe src={"https://itch.io/embed/2203248?linkback=true&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=c9c9c9&amp;border_color=333ad6"} 
 			width="552" height="167" frameborder="0">
 			<a href="https://feuillemorteentertainment.itch.io/we-have-a-mole">We have a mole by FeuilleMorte Entertainment</a>
 		</iframe>
 
-		<iframe src="https://itch.io/embed/1492024?bg_color=e08767&amp;fg_color=222222&amp;link_color=dc1a06&amp;border_color=b44242" 
+		<iframe src={"https://itch.io/embed/1492024?bg_color=e08767&amp;fg_color=222222&amp;link_color=dc1a06&amp;border_color=b44242"} 
 			frameborder="0">
 			<a href="https://feuillemorteentertainment.itch.io/scrambled">Scrambled! by FeuilleMorte Entertainment</a>
 		</iframe>
 
-		<iframe src="https://itch.io/embed/736364?bg_color=2f2f2f&amp;fg_color=ffffff&amp;link_color=858883&amp;border_color=979797" 
+		<iframe src={"https://itch.io/embed/736364?bg_color=2f2f2f&amp;fg_color=ffffff&amp;link_color=858883&amp;border_color=979797"} 
 			width="552" height="167" frameborder="0">
 			<a href="https://feuillemorteentertainment.itch.io/dangerous-roads">Dangerous Roads by FeuilleMorte Entertainment</a>
 		</iframe>
 
-		<iframe src="https://itch.io/embed/1054995?bg_color=860080&amp;fg_color=dbfbfd&amp;link_color=f70000&amp;border_color=333333" 
+		<iframe src={"https://itch.io/embed/1054995?bg_color=860080&amp;fg_color=dbfbfd&amp;link_color=f70000&amp;border_color=333333"} 
 			width="552" height="167" frameborder="0">
 			<a href="https://feuillemorteentertainment.itch.io/cats-are-long-liquid">Cats are long liquid by FeuilleMorte Entertainment</a>
 		</iframe>
 
 		<hr class="h-line"/>
 		<div style={{height:'20px'}}> 
-			<img class="img-olmo" src="images/olmo-6.png" title="That's the mayor..." style={{marginTop: '-110px', marginLeft: '62%', rotate: '0deg', scale:2}}/>
-			<img class="img-olmo" src="images/olmo-cerez.png" title="You found Olmo! :))" style={{marginTop:'-290px', marginLeft: '60px', rotate: '0deg', scale:2.5}}/>
-			<img class="img-olmo" src="images/olmo-building.png" title="That's just Castano's place." style={{marginTop: '-463px', marginLeft: '62%', rotate: '0deg', scale:2.5}}/>
+			<img class="img-olmo" src={require("./images/olmo-6.png")} title="That's the mayor..." style={{marginTop: '-110px', marginLeft: '62%', rotate: '0deg', scale:2}}/>
+			<img class="img-olmo" src={require("./images/olmo-cerez.png")} title="You found Olmo! :))" style={{marginTop:'-290px', marginLeft: '60px', rotate: '0deg', scale:2.5}}/>
+			<img class="img-olmo" src={require("./images/olmo-building.png")} title="That's just Castano's place." style={{marginTop: '-463px', marginLeft: '62%', rotate: '0deg', scale:2.5}}/>
 		</div>
 
 		<div class="bubbles">
