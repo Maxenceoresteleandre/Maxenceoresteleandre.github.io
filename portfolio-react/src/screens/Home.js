@@ -5,6 +5,15 @@ import './hover_effects.css';
 import './sidebar_style.css';
 
 export default () => {
+
+	const WorkItem = ({ title, description, image, x_position, link }) => {
+		return (
+			
+		  <button style={{ backgroundColor: color }}> Click Here </button>
+		);
+	  }
+
+
     return (
 <div>
 	<div class="sidenav">
