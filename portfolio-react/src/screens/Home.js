@@ -6,10 +6,15 @@ import './sidebar_style.css';
 
 export default () => {
 
-	const WorkItem = ({ title, description, image, x_position, link }) => {
+	const WorkItem = ({ title, description, image, x_position, link, is_selected=false }) => {
 		return (
-			
-		  <button style={{ backgroundColor: color }}> Click Here </button>
+
+			<div>
+				<button style={{ backgroundColor: image }}> Click Here </button>
+
+				onMouseEnter={() => this.setColor('red')}
+				onMouseLeave={() => this.setColor('blue')}
+			</div>
 		);
 	  }
 
