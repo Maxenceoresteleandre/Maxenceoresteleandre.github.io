@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css';
 import './bubbles_background.css';
 import './hover_effects.css';
@@ -6,17 +6,43 @@ import './sidebar_style.css';
 
 export default () => {
 
-	const WorkItem = ({ title, description, image, x_position, link, is_selected=false }) => {
+	const Person = () => {
+		const [person, setPerson] = useState({
+		 name: 'John Doe',
+		 age: 30,
+		 job: 'Developer'
+		});
+	   
 		return (
-
-			<div>
-				<button style={{ backgroundColor: image }}> Click Here </button>
-
-				onMouseEnter={() => this.setColor('red')}
-				onMouseLeave={() => this.setColor('blue')}
-			</div>
+		 <div>
+		  <p>Name: {person.name}</p>
+		  <p>Age: {person.age}</p>
+		  <p>Job: {person.job}</p>
+		 </div>
 		);
-	  }
+	   };
+
+	const WorkItem = () => {
+		const [workItem, setWorkItem] = useState({
+		 title: 'Allianz VR FreeRoaming',
+		 description: 'FreeRoaming Multiplayer VR Game, developed with Unreal Engine 5 for the 2024 Paris Olympic Games',
+		 image: require('./images/allianzVR.jpg'),
+		 link: 'https://maxenceoresteleandre.github.io/allianz_vr.html',
+		 x_position: '25px',
+		 is_selected: false
+		});
+
+		return (
+			<button style={{backgroundImage:`url('${workItem.image}')`, borderRadius:'50%'}}>
+				<img src={workItem.image} style={{maxWidth:'0%', position:'relative', top:0, left:0,zIndex:-1}} />
+					<h3>{workItem.title}
+						<p style={{fontSize:'14px'}}>
+							{workItem.description}
+						</p>
+					</h3>
+			</button>
+		)
+	}
 
 
     return (
@@ -144,60 +170,14 @@ export default () => {
 		<h2 class="z-text" style={{marginTop: '60px'}}>Video Game Work:
 			<img class="img-olmo" src={require("./images/olmo-4.png")} title="IS THAT A PIRATE CHICK???" style={{marginTop: '-170px', marginLeft: '-425px', rotate: '5deg', scale:(-1, 1)}}/>
 		</h2>
-		
 
-		<section id="allianz_vr">
-			<div class="z-work-item">
-				<div class="work-item">
-					<button class="collapsible">
-						<img class="project-img" src={require("./images/allianzVR.jpg")} />
-						<h3>Allianz FreeRoaming
-							<p style={{fontSize:'14px'}}>
-								FreeRoaming Multiplayer VR Game, developed with Unreal Engine 5 for the 2024 Paris Olympic Games
-							</p>
-						</h3>
-
-					</button>
-				</div>
-			</div>
-		</section>
-
-		<section id="xyz_plugins">
-			<div class="z-work-item">
-				<div class="work-item">
-					<button class="collapsible" href="https://maxenceoresteleandre.github.io/allianz_vr.html">
-						<div class="work-content">
-							<p style={{font: '50px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloremque accusantium, provident rerum eligendi doloribus, quasi quam blanditiis illum ex ipsum deleniti laborum recusandae impedit eius id aut hic quidem!</p>
-						</div>
-						<h3>XYZ Godot Utility Plugin Suite</h3>
-						<img class="project-img" src={require("./images/allianzVR.jpg")} />
-					</button>
-				</div>
-			</div>
-		</section>
-
-		<section id="play_sorbonne">
-			<div class="z-work-item">
-				<div class="work-item">
-					<button class="collapsible" href="https://maxenceoresteleandre.github.io/allianz_vr.html">
-						<img class="project-img" src={require("./images/allianzVR.jpg")} />
-						<h3>Play Sorbonne U Projects</h3>
-					</button>
-				</div>
-			</div>
-		</section>
-
-		<section id="feuille_morte">
-			<div class="z-work-item">
-				<div class="work-item">
-					<button class="collapsible" href="https://maxenceoresteleandre.github.io/allianz_vr.html">
-						<h3>FeuilleMorte Video Games</h3>
-						<img class="project-img" src={require("./images/allianzVR.jpg")} />
-					</button>
-				</div>
-			</div>
-		</section>
-	
+		<WorkItem
+			title="Allianz VR FreeRoaming"
+			description="FreeRoaming Multiplayer VR Game, developed with Unreal Engine 5 for the 2024 Paris Olympic Games"
+			image="./images/allianzVR.jpg"
+			link="https://maxenceoresteleandre.github.io/allianz_vr.html"
+			x_position="25px"
+		/>
 
 	</section>
 		
