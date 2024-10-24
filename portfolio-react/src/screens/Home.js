@@ -6,22 +6,6 @@ import './sidebar_style.css';
 
 export default () => {
 
-	const Person = () => {
-		const [person, setPerson] = useState({
-		 name: 'John Doe',
-		 age: 30,
-		 job: 'Developer'
-		});
-	   
-		return (
-		 <div>
-		  <p>Name: {person.name}</p>
-		  <p>Age: {person.age}</p>
-		  <p>Job: {person.job}</p>
-		 </div>
-		);
-	   };
-
 	const WorkItem = () => {
 		const [workItem, setWorkItem] = useState({
 		 title: 'Allianz VR FreeRoaming',
@@ -33,14 +17,17 @@ export default () => {
 		});
 
 		return (
-			<button style={{backgroundImage:`url('${workItem.image}')`, borderRadius:'50%'}}>
+		<div>
+			<button style={{maxWidth:'50%', aspectRatio:1.75/1, backgroundImage:`url('${workItem.image}')`, borderRadius:'40px', backgroundSize:'100%'}}>
 				<img src={workItem.image} style={{maxWidth:'0%', position:'relative', top:0, left:0,zIndex:-1}} />
 					<h3>{workItem.title}
-						<p style={{fontSize:'14px'}}>
-							{workItem.description}
-						</p>
+						
 					</h3>
 			</button>
+			<p style={{fontSize:'14px'}}>
+				{workItem.description}
+			</p>
+		</div>
 		)
 	}
 
