@@ -5,14 +5,18 @@ import './hover_effects.css';
 import './sidebar_style.css';
 
 export default () => {
+	const workItemsColor = 'rgba(185,0,140,255)';
+
 
 	const WorkItem = () => {
 		const [workItem, setWorkItem] = useState({
 		 title: 'Allianz VR FreeRoaming',
 		 description: 'FreeRoaming Multiplayer VR Game, developed with Unreal Engine 5 for the 2024 Paris Olympic Games',
-		 image: require('./images/allianzVR.jpg'),
-		 link: 'https://maxenceoresteleandre.github.io/allianz_vr.html',
-		 x_position: '25px',
+		 image: require('./images/olmo-1.png'),
+		 link: 'https://maxenceoresteleandre.github.io/olmo-1.png',
+		 x_position: '0px',
+		 bubble_top_x: '0px',
+		 bubble_bottom_x: '0px',
 		 is_selected: false
 		});
 
@@ -20,8 +24,16 @@ export default () => {
 		<div>
 			<button style={{maxWidth:'50%', aspectRatio:1.75/1, backgroundImage:`url('${workItem.image}')`, 
 						borderRadius:'60px', backgroundSize:'100%', outline:'1px', outlineWidth:'5px', 
-						outlineColor:'purple', outline:'solid' }}>
-				<img src={workItem.image} style={{maxWidth:'0%', position:'relative', top:0, left:0,zIndex:-1}} />
+						outlineColor:workItemsColor, outline:'solid' }}>
+				<div style={{position:'absolute', top:-20, left:workItem.bubble_top_x, width:'30px', height:'30px',
+					 backgroundColor:workItemsColor, borderRadius:'50%', aspectRatio:1/1}}>
+				</div>
+
+				<div style={{position:'absolute', bottom:-20, left:workItem.bubble_bottom_x, width:'30px', height:'30px',
+					 backgroundColor:workItemsColor, borderRadius:'50%', aspectRatio:1/1}}>
+				</div>
+				
+				<img src={workItem.image} style={{maxWidth:'0%', position:'relative', top:0, left:0}} />
 			</button>
 			<h3>
 				{workItem.title}
@@ -161,11 +173,13 @@ export default () => {
 		</h2>
 
 		<WorkItem
-			title="Allianz VR FreeRoaming"
-			description="FreeRoaming Multiplayer VR Game, developed with Unreal Engine 5 for the 2024 Paris Olympic Games"
-			image="./images/allianzVR.jpg"
-			link="https://maxenceoresteleandre.github.io/allianz_vr.html"
-			x_position="25px"
+			title="Allianz chez les zallemands"
+			description="yeaaah olympic games lezgo stuff"
+			image={require('./images/allianzVR.jpg')}
+			link="https://youtube.com"
+			x_position="100px"
+			bubble_top_x="40px"
+			bubble_bottom_x='100px'
 		/>
 
 	</section>
