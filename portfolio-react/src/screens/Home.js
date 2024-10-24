@@ -18,12 +18,14 @@ export default () => {
 
 		return (
 		<div>
-			<button style={{maxWidth:'50%', aspectRatio:1.75/1, backgroundImage:`url('${workItem.image}')`, borderRadius:'40px', backgroundSize:'100%'}}>
+			<button style={{maxWidth:'50%', aspectRatio:1.75/1, backgroundImage:`url('${workItem.image}')`, 
+						borderRadius:'60px', backgroundSize:'100%', outline:'1px', outlineWidth:'5px', 
+						outlineColor:'purple', outline:'solid' }}>
 				<img src={workItem.image} style={{maxWidth:'0%', position:'relative', top:0, left:0,zIndex:-1}} />
-					<h3>{workItem.title}
-						
-					</h3>
 			</button>
+			<h3>
+				{workItem.title}
+			</h3>
 			<p style={{fontSize:'14px'}}>
 				{workItem.description}
 			</p>
